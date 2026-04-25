@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://juliarus768-cyber.github.io/hmn-careers-site/sitemap.xml
