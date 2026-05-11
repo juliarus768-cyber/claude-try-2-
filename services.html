@@ -1,119 +1,378 @@
- (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
-diff --git a/services.html b/services.html
-index a86816b1f3582a8f13c3a58085cbf740b929e42d..c7d7711df8647accacbb10f811396eac6365e0e5 100644
---- a/services.html
-+++ b/services.html
-@@ -1,84 +1,101 @@
- <!doctype html>
- <html lang="en">
- <head>
-   <meta charset="utf-8" />
-   <meta name="viewport" content="width=device-width, initial-scale=1" />
-   <meta name="theme-color" content="#1A2A3A" />
-   <meta name="description" content="Service packages from Hire Me Now for career strategy and job search support in Canada." />
-   <title>Services | Hire Me Now</title>
-   <link rel="stylesheet" href="style.css" />
- </head>
- <body>
-   <header class="site-header">
-     <div class="container nav-wrap">
-       <a class="brand" href="index.html">Hire Me Now</a>
-       <nav aria-label="Primary navigation" class="site-nav">
-         <a href="index.html">Home</a>
-         <a href="services.html" aria-current="page">Services</a>
-         <a href="about.html">About</a>
-         <a href="contact.html">Contact</a>
-+        <a href="index.html#free-diagnostic">Free Diagnostic</a>
-       </nav>
-       <a class="btn btn-primary nav-cta" href="contact.html">Book a Call</a>
-     </div>
-   </header>
- 
-   <main class="section">
-     <div class="container">
--      <h1>Services</h1>
--      <p class="lead">Practical support options designed for different stages of your job search journey in Canada.</p>
-+      <h1>Career Coaching Services</h1>
-+      <p class="eyebrow">Designed for the Canadian market</p>
-+      <p class="lead">Practical support for every stage of your job search, from first diagnostic to interview-ready.</p>
- 
-       <div class="grid three">
-         <article class="card price-card">
-           <h2>Career &amp; Job Search Diagnostic</h2>
--          <p class="price">$120–$180</p>
-+          <p><strong>One-time session</strong></p>
-+          <p class="price">$120</p>
-           <ul class="list">
--            <li>Resume and positioning review</li>
-+            <li>Resume and career positioning review</li>
-             <li>Job search pattern analysis</li>
-+            <li>Canadian labour market alignment check</li>
-+            <li>Education or training pathway discussion, where relevant</li>
-             <li>Clear 2–4 week action roadmap</li>
-           </ul>
-           <a class="btn btn-outline" href="contact.html">Get Started</a>
-         </article>
- 
-         <article class="card price-card featured">
-+          <p><strong>Most Popular / Recommended</strong></p>
-           <h2>Job Search Strategy Package</h2>
--          <p class="price">$300–$500</p>
-+          <p><strong>Full search strategy</strong></p>
-+          <p class="price">$300</p>
-           <ul class="list">
-             <li>Role-targeting and messaging strategy</li>
--            <li>Resume + LinkedIn direction</li>
--            <li>Structured weekly execution plan</li>
-+            <li>One targeted resume and cover letter based on the consultation</li>
-+            <li>Resume and LinkedIn direction</li>
-+            <li>Choice of LinkedIn optimization or interview preparation</li>
-+            <li>Structured weekly job search plan</li>
-+            <li>Outreach and networking guidance</li>
-+            <li>Detailed Canadian job search guide covering resumes, applications, interviews, networking, salary negotiation, and follow-up strategy</li>
-           </ul>
-           <a class="btn btn-primary" href="contact.html">Choose This Package</a>
-         </article>
- 
-         <article class="card price-card">
-+          <p><strong>Most Comprehensive</strong></p>
-           <h2>Complete Career Support</h2>
--          <p class="price">$600–$1,200</p>
-+          <p><strong>End-to-end guidance</strong></p>
-+          <p class="price">$600</p>
-           <ul class="list">
--            <li>Comprehensive strategy and materials support</li>
-+            <li>Full strategy and materials support</li>
-+            <li>Two targeted resume and cover letter versions</li>
-+            <li>LinkedIn profile alignment</li>
-             <li>Interview preparation and practice</li>
-             <li>Ongoing feedback and refinements</li>
-+            <li>Support through offer negotiation</li>
-+            <li>Detailed job search launch guide and setup assistance</li>
-           </ul>
-           <a class="btn btn-outline" href="contact.html">Talk to Us</a>
-         </article>
-       </div>
- 
-       <section class="section-tight">
-         <h2>Add-on services</h2>
-         <div class="grid two">
-           <ul class="card list">
-             <li>Resume rewrite</li>
-             <li>Cover letter</li>
-             <li>LinkedIn support</li>
-           </ul>
-           <ul class="card list">
-             <li>Interview preparation</li>
-             <li>Labour market research</li>
-           </ul>
-         </div>
-       </section>
-     </div>
-   </main>
- 
-   <footer class="site-footer">
-     <div class="container footer-wrap">
-       <p>© 2026 Hire Me Now</p>
- 
-EOF
-)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <title>Career Coaching Services in Canada | Resume & Job Search Strategy | Hire Me Now</title>
+  <meta name="description" content="Choose from career diagnostic sessions, job search strategy packages, or complete career support. Expert guidance for Canadian job seekers — from $120 to $1,200.">
+  <link rel="canonical" href="https://juliarus768-cyber.github.io/hmn-careers-site/services.html">
+  <meta property="og:title" content="Career Coaching Services in Canada | Hire Me Now">
+  <meta property="og:description" content="Resume strategy, job search coaching, LinkedIn optimization and interview prep for Canadian job seekers. Multilingual support available.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://juliarus768-cyber.github.io/hmn-careers-site/services.html">
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://juliarus768-cyber.github.io/hmn-careers-site/" },
+      { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://juliarus768-cyber.github.io/hmn-careers-site/services.html" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I know which career coaching package is right for me?",
+        "acceptedAnswer": { "@type": "Answer", "text": "If you are unsure of your direction or have never had your documents reviewed in the Canadian context, the Career Diagnostic is the right starting point. If you have a clear target role and need a structured execution plan, the Strategy Package is most appropriate. If you want end-to-end support from strategy through to interview offers, the Complete Career Support package provides the most comprehensive guidance." }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you work with people in any Canadian city?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. All sessions are conducted remotely, so we work with job seekers across Canada — Toronto, Vancouver, Calgary, Ottawa, Montreal, and beyond." }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does the career coaching process take in Canada?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The Career Diagnostic is a single session. The Strategy Package typically spans two to four weeks. Complete Career Support is an ongoing engagement that continues until you are interview-ready and actively receiving offers." }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you offer career coaching support in languages other than English?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Our team provides support in Russian, Spanish, Hebrew, Cantonese, Bengali, Hindi, and Urdu, in addition to English." }
+      },
+      {
+        "@type": "Question",
+        "name": "What makes Hire Me Now different from other career services in Canada?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Hire Me Now is founder-led by Julia Cher, a Certified Resume Strategist with 15 or more years of experience. We specialize in the Canadian labour market and work with newcomers, international students, and career changers who need strategies that go beyond generic resume advice. Our multilingual team, structured methodology, and focus on real execution set us apart." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="site-nav" aria-label="Main navigation">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="Hire Me Now home">Hire Me <span>Now</span></a>
+    <ul class="nav-links" role="list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html" class="active">Services</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="contact.html" class="nav-cta" aria-label="Book a strategy call">Book a Call</a></li>
+    </ul>
+    <button class="nav-hamburger" aria-label="Toggle mobile menu" onclick="document.getElementById('mobileNav').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div id="mobileNav" class="nav-mobile" role="navigation" aria-label="Mobile navigation">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="contact.html">Book a Call →</a>
+  </div>
+</nav>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb" aria-label="Breadcrumb navigation">
+  <div class="container breadcrumb-inner">
+    <a href="index.html">Home</a>
+    <span aria-hidden="true">›</span>
+    <span aria-current="page">Services</span>
+  </div>
+</div>
+
+<!-- HERO -->
+<header class="page-hero" role="banner">
+  <div class="container page-hero-inner">
+    <span class="section-label" style="color:var(--gold-light);">Career Coaching Services</span>
+    <h1>Designed for the <em>Canadian market</em></h1>
+    <p>Practical support options for every stage of your job search — from first diagnostic to interview-ready.</p>
+  </div>
+</header>
+
+<!-- PACKAGES -->
+<main class="service-packages" aria-label="Career coaching packages">
+  <div class="container">
+
+    <!-- Package 1 -->
+    <div class="service-package">
+      <div class="service-package-visual">
+        <div class="pkg-num" aria-hidden="true">01</div>
+        <div class="pkg-price-big" aria-label="Price: 120 to 180 dollars">$120–$180</div>
+        <div class="pkg-label">One-time session</div>
+        <div class="pkg-features" role="list" aria-label="Package features">
+          <div class="pkg-feature" role="listitem"><div class="pkg-dot" aria-hidden="true"></div>Resume and positioning review</div>
+          <div class="pkg-feature" role="listitem"><div class="pkg-dot" aria-hidden="true"></div>Job search pattern analysis</div>
+          <div class="pkg-feature" role="listitem"><div class="pkg-dot" aria-hidden="true"></div>Clear 2–4 week action roadmap</div>
+          <div class="pkg-feature" role="listitem"><div class="pkg-dot" aria-hidden="true"></div>Canadian market alignment check</div>
+        </div>
+      </div>
+      <div class="service-content">
+        <span class="tag">Entry point</span>
+        <h2>Career &amp; Job Search <em>Diagnostic</em></h2>
+        <p>The ideal starting point for any job seeker who isn't getting the responses they deserve. We review your current situation, identify the gaps, and hand you a focused action plan you can execute immediately.</p>
+        <p>Most clients see a measurable improvement in application quality and clarity within the first two weeks.</p>
+        <a href="contact.html" class="btn btn-primary btn-arrow" aria-label="Get started with Career Diagnostic">Get Started</a>
+      </div>
+    </div>
+
+    <!-- Package 2 -->
+    <div class="service-package reverse">
+      <div class="service-package-visual dark">
+        <div class="pkg-num" aria-hidden="true">02</div>
+        <div class="pkg-price-big" aria-label="Price: 300 to 500 dollars">$300–$500</div>
+        <div class="pkg-label" style="color:rgba(255,255,255,0.4);">Full search strategy</div>
+        <div class="pkg-features" role="list" aria-label="Package features">
+          <div class="pkg-feature" role="listitem"><div class="pkg-dot" aria-hidden="true"></div>Role-targeting and messaging strategy</div>
+          <div class="pkg-feature" role="listitem"><div class="pkg-dot" aria-hidden="true"></div>Resume and LinkedIn direction</div>
+          <div class="pkg-feature" role="listitem"><div class="pkg-dot" aria-hidden="true"></div>Structured weekly execution plan</div>
+          <div class="pkg-feature" role="listitem"><div class="pkg-dot" aria-hidden="true"></div>Outreach and networking guidance</div>
+          <div class="pkg-feature" role="listitem"><div class="pkg-dot" aria-hidden="true"></div>Progress check-ins and refinements</div>
+        </div>
+      </div>
+      <div class="service-content">
+        <span class="pkg-badge">Most Popular</span>
+        <span class="tag">Recommended</span>
+        <h2>Job Search <em>Strategy Package</em></h2>
+        <p>For job seekers who are ready to build a real plan and execute it consistently. We define your target role, sharpen your messaging, align your documents, and create a search system with weekly accountability.</p>
+        <p>This is the package that turns scattered applications into focused, strategic outreach — and interviews.</p>
+        <a href="contact.html" class="btn btn-gold btn-arrow" aria-label="Choose the Job Search Strategy Package">Choose This Package</a>
+      </div>
+    </div>
+
+    <!-- Package 3 -->
+    <div class="service-package">
+      <div class="service-package-visual">
+        <div class="pkg-num" aria-hidden="true">03</div>
+        <div class="pkg-price-big" aria-label="Price: 600 to 1,200 dollars">$600–$1,200</div>
+        <div class="pkg-label">End-to-end guidance</div>
+        <div class="pkg-features" role="list" aria-label="Package features">
+          <div class="pkg-feature" role="listitem"><div class="pkg-dot" aria-hidden="true"></div>Full strategy and materials support</div>
+          <div class="pkg-feature" role="listitem"><div class="pkg-dot" aria-hidden="true"></div>Resume rewrite and optimization</div>
+          <div class="pkg-feature" role="listitem"><div class="pkg-dot" aria-hidden="true"></div>LinkedIn profile alignment</div>
+          <div class="pkg-feature" role="listitem"><div class="pkg-dot" aria-hidden="true"></div>Interview preparation and practice</div>
+          <div class="pkg-feature" role="listitem"><div class="pkg-dot" aria-hidden="true"></div>Ongoing feedback and refinements</div>
+          <div class="pkg-feature" role="listitem"><div class="pkg-dot" aria-hidden="true"></div>Support through offer negotiation</div>
+        </div>
+      </div>
+      <div class="service-content">
+        <span class="tag">Most comprehensive</span>
+        <h2>Complete <em>Career Support</em></h2>
+        <p>From initial strategy all the way through to accepted offer — this is for job seekers who want comprehensive guidance, accountability, and expert support at every stage of the process.</p>
+        <p>Includes everything in the Strategy Package plus hands-on interview coaching, materials review, and refinements throughout your search.</p>
+        <a href="contact.html" class="btn btn-outline btn-arrow" aria-label="Talk to us about Complete Career Support">Talk to Us</a>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<!-- COMPARISON TABLE -->
+<section class="compare-section" aria-labelledby="compare-heading">
+  <div class="container">
+    <span class="section-label">Compare</span>
+    <h2 class="section-heading" id="compare-heading">Package <em>comparison</em></h2>
+    <div class="compare-table-wrap" role="region" aria-label="Package comparison table" tabindex="0">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th scope="col">Feature</th>
+            <th scope="col">Diagnostic<br><span style="font-weight:300; opacity:0.6;">$120–$180</span></th>
+            <th scope="col">Strategy Package<br><span style="font-weight:300; opacity:0.6;">$300–$500</span></th>
+            <th scope="col">Complete Support<br><span style="font-weight:300; opacity:0.6;">$600–$1,200</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Resume review</td><td class="check" aria-label="Included">✓</td><td class="check" aria-label="Included">✓</td><td class="check" aria-label="Included">✓</td></tr>
+          <tr><td>Job search pattern analysis</td><td class="check" aria-label="Included">✓</td><td class="check" aria-label="Included">✓</td><td class="check" aria-label="Included">✓</td></tr>
+          <tr><td>Action roadmap</td><td class="check" aria-label="Included">✓</td><td class="check" aria-label="Included">✓</td><td class="check" aria-label="Included">✓</td></tr>
+          <tr><td>Role targeting strategy</td><td class="dash" aria-label="Not included">—</td><td class="check" aria-label="Included">✓</td><td class="check" aria-label="Included">✓</td></tr>
+          <tr><td>LinkedIn direction</td><td class="dash" aria-label="Not included">—</td><td class="check" aria-label="Included">✓</td><td class="check" aria-label="Included">✓</td></tr>
+          <tr><td>Weekly execution plan</td><td class="dash" aria-label="Not included">—</td><td class="check" aria-label="Included">✓</td><td class="check" aria-label="Included">✓</td></tr>
+          <tr><td>Resume rewrite</td><td class="dash" aria-label="Not included">—</td><td class="dash" aria-label="Not included">—</td><td class="check" aria-label="Included">✓</td></tr>
+          <tr><td>Interview preparation</td><td class="dash" aria-label="Not included">—</td><td class="dash" aria-label="Not included">—</td><td class="check" aria-label="Included">✓</td></tr>
+          <tr><td>Ongoing feedback</td><td class="dash" aria-label="Not included">—</td><td class="dash" aria-label="Not included">—</td><td class="check" aria-label="Included">✓</td></tr>
+          <tr><td>Offer negotiation support</td><td class="dash" aria-label="Not included">—</td><td class="dash" aria-label="Not included">—</td><td class="check" aria-label="Included">✓</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ADD-ONS -->
+<section class="addons-section" aria-labelledby="addons-heading">
+  <div class="container">
+    <span class="section-label">Flexible support</span>
+    <h2 class="section-heading" id="addons-heading">Add-on <em>services</em></h2>
+    <p class="section-sub">Enhance any package with targeted add-ons, or book them individually if you have a specific need.</p>
+    <div class="addons-grid" role="list">
+      <div class="addon-card" role="listitem">
+        <div class="addon-icon" aria-hidden="true">📝</div>
+        <h3>Resume Rewrite</h3>
+        <p>Full rewrite of your resume, aligned to Canadian expectations and your target role.</p>
+      </div>
+      <div class="addon-card" role="listitem">
+        <div class="addon-icon" aria-hidden="true">✉️</div>
+        <h3>Cover Letter</h3>
+        <p>A compelling, role-specific cover letter that complements your resume.</p>
+      </div>
+      <div class="addon-card" role="listitem">
+        <div class="addon-icon" aria-hidden="true">💼</div>
+        <h3>LinkedIn Optimization</h3>
+        <p>Profile rewrite and strategic positioning to attract Canadian recruiters.</p>
+      </div>
+      <div class="addon-card" role="listitem">
+        <div class="addon-icon" aria-hidden="true">🎙️</div>
+        <h3>Interview Preparation</h3>
+        <p>Structured practice sessions with feedback on Canadian interview style and expectations.</p>
+      </div>
+      <div class="addon-card" role="listitem">
+        <div class="addon-icon" aria-hidden="true">🔍</div>
+        <h3>Labour Market Research</h3>
+        <p>In-depth research on your target sector, roles, and employers in the Canadian market.</p>
+      </div>
+    </div>
+    <p style="text-align:center; margin-top:36px;">
+      <a href="contact.html" class="btn btn-outline" aria-label="Contact us to discuss add-on services">Ask About Add-ons</a>
+    </p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section" aria-labelledby="faq-heading">
+  <div class="container">
+    <span class="section-label">FAQ</span>
+    <h2 class="section-heading" id="faq-heading">Common <em>questions</em></h2>
+    <div class="faq-list" role="list">
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
+          How do I know which career coaching package is right for me?
+          <span class="faq-arrow" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer" role="region">
+          If you are unsure of your direction or have never had your documents reviewed in the Canadian context, the Career Diagnostic is the ideal starting point. If you have a clear target role and need a structured execution plan, the Strategy Package is most appropriate. For end-to-end support from strategy to interview-ready, Complete Career Support is the right choice.
+        </div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
+          Do you work with job seekers in any Canadian city?
+          <span class="faq-arrow" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer" role="region">
+          Yes. All sessions are conducted remotely via video call, so we work with clients across Canada — Toronto, Vancouver, Calgary, Ottawa, Montreal, and every city in between.
+        </div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
+          How long does the career coaching process take in Canada?
+          <span class="faq-arrow" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer" role="region">
+          The Career Diagnostic is a single focused session. The Strategy Package typically spans two to four weeks of structured work. Complete Career Support is an ongoing engagement — most clients begin receiving interviews within four to eight weeks, depending on their target sector and starting point.
+        </div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
+          Do you offer career coaching support in languages other than English?
+          <span class="faq-arrow" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer" role="region">
+          Yes. Our team provides multilingual support in Russian, Spanish, Hebrew, Cantonese, Bengali, Hindi, and Urdu. If you would prefer to work in your first language, please let us know when you reach out.
+        </div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
+          What makes Hire Me Now different from other career services in Canada?
+          <span class="faq-arrow" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer" role="region">
+          Hire Me Now is founder-led by Julia Cher, a Certified Resume Strategist with 15 or more years of experience specifically in the Canadian labour market. We specialize in the unique challenges faced by newcomers, international students, and career changers — not generic job seekers. Our multilingual team, structured methodology, and focus on real execution set us apart from general career services.
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<section class="cta-band" aria-labelledby="services-cta-heading">
+  <div class="container">
+    <div class="cta-band-inner">
+      <h2 id="services-cta-heading">Not sure where to <em>start?</em></h2>
+      <p>Book a free 20-minute call. We'll help you figure out exactly which service fits your situation.</p>
+      <div class="cta-band-btns">
+        <a href="contact.html" class="btn btn-gold btn-arrow" aria-label="Book a free strategy call with Hire Me Now">Book a Free Call</a>
+        <a href="about.html" class="btn btn-outline-white" aria-label="Learn about Julia Cher and the team">Meet the Team</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">Hire Me <span>Now</span></a>
+        <p>Career strategy and job search coaching for newcomers, students, and professionals navigating the Canadian labour market.</p>
+      </div>
+      <nav class="footer-col" aria-label="Footer navigation">
+        <h4>Navigation</h4>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About Julia</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="services.html">Career Diagnostic</a>
+        <a href="services.html">Strategy Package</a>
+        <a href="services.html">Complete Support</a>
+        <a href="services.html">Add-on Services</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Hire Me Now. All rights reserved.</p>
+      <a href="mailto:hire.me.now.resumes@gmail.com" class="footer-email" aria-label="Email Hire Me Now">hire.me.now.resumes@gmail.com</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleFaq(btn) {
+  const item = btn.parentElement;
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(el => {
+    el.classList.remove('open');
+    el.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+  });
+  if (!isOpen) {
+    item.classList.add('open');
+    btn.setAttribute('aria-expanded', 'true');
+  }
+}
+document.addEventListener('click', function(e) {
+  const hamburger = document.querySelector('.nav-hamburger');
+  const mobileNav = document.getElementById('mobileNav');
+  if (!hamburger.contains(e.target) && !mobileNav.contains(e.target)) {
+    mobileNav.classList.remove('open');
+  }
+});
+</script>
+</body>
+</html>
