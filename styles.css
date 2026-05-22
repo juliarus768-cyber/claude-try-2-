@@ -210,6 +210,13 @@ ul { list-style: none; }
 .hero-inner {
   position: relative;
   z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 360px);
+  gap: 36px;
+  align-items: center;
+}
+.hero-copy {
+  min-width: 0;
   max-width: 760px;
 }
 .hero-badge {
@@ -254,22 +261,27 @@ ul { list-style: none; }
 }
 .hero-ctas { display: flex; flex-wrap: wrap; gap: 14px; }
 .hero-image-wrap {
-  max-width: 260px;
-  margin: 8px auto 0;
+  width: 100%;
+  max-width: 340px;
+  margin: 0 0 0 auto;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
 }
 .hero-image {
   width: 100%;
-  max-height: 330px;
-  object-fit: cover;
+  max-height: 360px;
+  object-fit: contain;
   border-radius: 1.15rem;
   box-shadow: 0 14px 30px rgba(12,27,51,0.2);
   display: block;
 }
 
 @media (max-width: 768px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
   .hero-image-wrap {
     max-width: 220px;
     margin: 18px auto 0;
