@@ -253,6 +253,29 @@ ul { list-style: none; }
   line-height: 1.65;
 }
 .hero-ctas { display: flex; flex-wrap: wrap; gap: 14px; }
+.hero-image-wrap {
+  max-width: 260px;
+  margin: 8px auto 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.hero-image {
+  width: 100%;
+  max-height: 330px;
+  object-fit: cover;
+  border-radius: 1.15rem;
+  box-shadow: 0 14px 30px rgba(12,27,51,0.2);
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .hero-image-wrap {
+    max-width: 220px;
+    margin: 18px auto 0;
+  }
+  .hero-image { max-height: 260px; }
+}
 
 /* ── TRUST BAR ── */
 .trust-bar {
