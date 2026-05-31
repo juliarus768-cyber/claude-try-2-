@@ -807,8 +807,8 @@ section { padding: var(--section-py) 0; }
 }
 .footer-inner {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  gap: 60px;
+  grid-template-columns: 2fr repeat(3, 1fr);
+  gap: 44px;
   margin-bottom: 48px;
 }
 .footer-brand .nav-logo { font-size: 20px; margin-bottom: 14px; }
