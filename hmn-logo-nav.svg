@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 44" role="img" aria-labelledby="title desc">
+  <title id="title">Hire Me Now Resumes</title>
+  <desc id="desc">Transparent reversed navigation wordmark for Hire Me Now Resumes.</desc>
+  <defs>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#E8B655"/>
+      <stop offset="1" stop-color="#C9922A"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" fill-rule="evenodd">
+    <circle cx="22" cy="22" r="14" stroke="url(#gold)" stroke-width="2.2"/>
+    <path d="M14.8 29.2V14.8h2.8v5.8h8.8v-5.8h2.8v14.4h-2.8v-6.1h-8.8v6.1z" fill="#FFFFFF"/>
+    <path d="M13.6 33.4h16.8" stroke="#E8B655" stroke-width="2" stroke-linecap="round"/>
+    <text x="43" y="20.2" font-family="Cormorant Garamond, Georgia, 'Times New Roman', serif" font-size="18" font-weight="600" letter-spacing="0.05">
+      <tspan fill="#FFFFFF">Hire Me </tspan><tspan fill="#E8B655">Now</tspan>
+    </text>
+    <text x="44" y="34.2" fill="#FFFFFF" fill-opacity="0.82" font-family="DM Sans, Inter, Arial, sans-serif" font-size="9.8" font-weight="600" letter-spacing="2.15">RESUMES</text>
+  </g>
+</svg>
