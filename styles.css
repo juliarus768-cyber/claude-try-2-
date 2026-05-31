@@ -127,12 +127,12 @@ ul { list-style: none; }
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 36px;
+  gap: 22px;
 }
 .nav-links a {
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 400;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.045em;
   text-transform: uppercase;
   color: rgba(255,255,255,0.7);
   transition: color 0.18s;
@@ -302,6 +302,90 @@ ul { list-style: none; }
   .hero-image-wrap {
     width: min(100%, 220px);
     margin: 18px auto 0;
+  }
+}
+
+/* ── DIAGNOSTIC CTA ── */
+.diagnostic-cta {
+  background: linear-gradient(135deg, var(--cream) 0%, #f3e7d8 100%);
+  padding: 56px 0;
+  border-bottom: 1px solid var(--border);
+}
+.diagnostic-cta-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(260px, 0.65fr);
+  gap: 40px;
+  align-items: center;
+  background: var(--white);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-lg);
+  padding: 44px;
+  box-shadow: 0 14px 40px rgba(12,27,51,0.06);
+}
+.diagnostic-cta h2,
+.service-diagnostic-cta h2 {
+  font-family: var(--font-display);
+  font-weight: 300;
+  color: var(--navy);
+  line-height: 1.15;
+}
+.diagnostic-cta h2 {
+  font-size: clamp(30px, 3.4vw, 46px);
+  margin-bottom: 16px;
+}
+.diagnostic-cta-copy p,
+.diagnostic-cta-action p,
+.service-diagnostic-cta p {
+  color: var(--muted);
+  font-weight: 300;
+  line-height: 1.7;
+}
+.diagnostic-cta-copy p { font-size: 16px; }
+.diagnostic-cta-action {
+  border-left: 1px solid var(--border);
+  padding-left: 36px;
+}
+.diagnostic-cta-action p {
+  font-size: 13px;
+  margin-top: 18px;
+}
+.service-diagnostic-cta {
+  background: var(--cream);
+  padding: 42px 0;
+  border-bottom: 1px solid var(--border);
+}
+.service-diagnostic-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 28px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 32px 36px;
+}
+.service-diagnostic-cta h2 {
+  font-size: clamp(26px, 2.8vw, 36px);
+  margin-bottom: 10px;
+}
+.service-diagnostic-cta p {
+  max-width: 620px;
+  font-size: 15px;
+}
+@media (max-width: 768px) {
+  .diagnostic-cta-inner {
+    grid-template-columns: 1fr;
+    padding: 32px 24px;
+  }
+  .diagnostic-cta-action {
+    border-left: none;
+    border-top: 1px solid var(--border);
+    padding: 28px 0 0;
+  }
+  .service-diagnostic-inner {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 28px 24px;
   }
 }
 
