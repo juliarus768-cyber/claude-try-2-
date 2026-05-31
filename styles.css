@@ -127,12 +127,12 @@ ul { list-style: none; }
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 36px;
+  gap: 22px;
 }
 .nav-links a {
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 400;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.045em;
   text-transform: uppercase;
   color: rgba(255,255,255,0.7);
   transition: color 0.18s;
@@ -723,8 +723,8 @@ section { padding: var(--section-py) 0; }
 }
 .footer-inner {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  gap: 60px;
+  grid-template-columns: 2fr repeat(3, 1fr);
+  gap: 44px;
   margin-bottom: 48px;
 }
 .footer-brand .nav-logo { font-size: 20px; margin-bottom: 14px; }

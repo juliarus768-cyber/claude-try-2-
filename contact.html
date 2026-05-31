@@ -42,10 +42,11 @@
     <ul class="nav-links" role="list">
       <li><a href="index.html">Home</a></li>
       <li><a href="services.html">Services</a></li>
+      <li><a href="https://diagnostic.hiremenowresumes.ca" target="_blank" rel="noopener">Free Resume Diagnostic</a></li>
       <li><a href="resources.html">Resources</a></li>
-      <li><a href="about.html">About</a></li>
+      <li><a href="about.html">About Julia</a></li>
       <li><a href="contact.html" class="active">Contact</a></li>
-      <li><a href="https://calendly.com/hire-me-now-resumes/15" class="nav-cta" aria-label="Book a strategy call" target="_blank" rel="noopener">Book a Call</a></li>
+      <li><a href="https://calendly.com/hire-me-now-resumes/15" class="nav-cta" target="_blank" rel="noopener" aria-label="Book a strategy call">Book a Call</a></li>
     </ul>
     <button class="nav-hamburger" aria-label="Toggle mobile menu" onclick="document.getElementById('mobileNav').classList.toggle('open')">
       <span></span><span></span><span></span>
@@ -54,8 +55,9 @@
   <div id="mobileNav" class="nav-mobile" role="navigation" aria-label="Mobile navigation">
     <a href="index.html">Home</a>
     <a href="services.html">Services</a>
+    <a href="https://diagnostic.hiremenowresumes.ca" target="_blank" rel="noopener">Free Resume Diagnostic</a>
     <a href="resources.html">Resources</a>
-    <a href="about.html">About</a>
+    <a href="about.html">About Julia</a>
     <a href="contact.html">Contact</a>
     <a href="https://calendly.com/hire-me-now-resumes/15" target="_blank" rel="noopener">Book a Call →</a>
   </div>
@@ -142,19 +144,45 @@
         <div class="contact-form-wrap" role="region" aria-label="Contact form">
           <span class="section-label" style="margin-bottom:20px;">Send us a message</span>
 
-          <iframe
-  data-tally-src="https://tally.so/embed/Pdbj7B?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
-  loading="lazy"
-  width="100%"
-  height="700"
-  frameborder="0"
-  marginheight="0"
-  marginwidth="0"
-  title="Hire Me Now Inquiry Form">
-</iframe>
-<script>
-var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach(function(e){e.src=e.dataset.tallySrc})};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w;s.onload=v;s.onerror=v;d.body.appendChild(s);}
-</script>
+          <form action="mailto:info@hiremenowresumes.ca" method="post" enctype="text/plain" class="contact-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="Name" autocomplete="name" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="Email" autocomplete="email" required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="phone">Phone optional</label>
+                <input type="tel" id="phone" name="Phone" autocomplete="tel">
+              </div>
+              <div class="form-group">
+                <label for="help-with">What do you need help with?</label>
+                <select id="help-with" name="What do you need help with?" required>
+                  <option value="" selected disabled>Select an option</option>
+                  <option value="Resume Writing">Resume Writing</option>
+                  <option value="Cover Letter">Cover Letter</option>
+                  <option value="LinkedIn">LinkedIn</option>
+                  <option value="Interview Preparation">Interview Preparation</option>
+                  <option value="Career Strategy">Career Strategy</option>
+                  <option value="Free Diagnostic Follow-Up">Free Diagnostic Follow-Up</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="Message" required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-gold btn-submit">Send Message</button>
+          </form>
         </div>
 
         <!-- Calendly Placeholder -->
@@ -163,8 +191,9 @@ var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=t
           <p>Skip the form — pick a time that works for you and we'll talk through your situation directly.</p>
           <a href="https://calendly.com/hire-me-now-resumes/15" class="btn btn-outline-white" aria-label="Request a free strategy call via email">Request a Call Time →</a>
           <p style="margin-top:12px;"><a href="mailto:info@hiremenowresumes.ca" aria-label="Email us directly" style="color:rgba(255,255,255,0.9); font-weight:500;">Email Us Directly</a></p>
-      </div>
+        </div>
 
+      </div>
     </div>
   </div>
 </section>
@@ -182,9 +211,11 @@ var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=t
         <h4>Navigation</h4>
         <a href="index.html">Home</a>
         <a href="services.html">Services</a>
+        <a href="https://diagnostic.hiremenowresumes.ca" target="_blank" rel="noopener">Free Resume Diagnostic</a>
         <a href="resources.html">Resources</a>
         <a href="about.html">About Julia</a>
         <a href="contact.html">Contact</a>
+        <a href="https://calendly.com/hire-me-now-resumes/15" target="_blank" rel="noopener">Book a Call</a>
       </nav>
       <div class="footer-col">
         <h4>Services</h4>
