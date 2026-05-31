@@ -117,13 +117,16 @@ ul { list-style: none; }
   height: 68px;
 }
 .nav-logo {
-  font-family: var(--font-display);
-  font-size: 22px;
-  font-weight: 600;
-  color: var(--white);
-  letter-spacing: 0.01em;
+  display: inline-flex;
+  align-items: center;
+  flex: 0 0 auto;
 }
-.nav-logo span { color: var(--gold-light); }
+.nav-logo img {
+  display: block;
+  width: 180px;
+  max-width: 100%;
+  height: auto;
+}
 .nav-links {
   display: flex;
   align-items: center;
@@ -811,7 +814,7 @@ section { padding: var(--section-py) 0; }
   gap: 44px;
   margin-bottom: 48px;
 }
-.footer-brand .nav-logo { font-size: 20px; margin-bottom: 14px; }
+.footer-brand .nav-logo { margin-bottom: 14px; }
 .footer-brand p { font-size: 14px; color: rgba(255,255,255,0.4); line-height: 1.7; max-width: 280px; }
 .footer-col h4 { font-size: 11px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold-light); margin-bottom: 20px; }
 .footer-col a { display: block; font-size: 14px; color: rgba(255,255,255,0.5); margin-bottom: 10px; transition: color 0.15s; }
