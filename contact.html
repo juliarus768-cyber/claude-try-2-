@@ -147,7 +147,10 @@
         <div class="contact-form-wrap" role="region" aria-label="Contact form">
           <span class="section-label" style="margin-bottom:20px;">Send us a message</span>
 
-          <form action="mailto:info@hiremenowresumes.ca" method="post" enctype="text/plain" class="contact-form">
+          <form action="https://formsubmit.co/info@hiremenowresumes.ca" method="POST" class="contact-form">
+            <input type="hidden" name="_subject" value="New Hire Me Now website inquiry">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
             <div class="form-row">
               <div class="form-group">
                 <label for="name">Name</label>
@@ -185,6 +188,7 @@
             </div>
 
             <button type="submit" class="btn btn-gold btn-submit">Send Message</button>
+            <p style="font-size:13px;color:var(--muted);margin-top:12px;">Prefer email? Write directly to <a href="mailto:info@hiremenowresumes.ca">info@hiremenowresumes.ca</a>.</p>
           </form>
         </div>
 
