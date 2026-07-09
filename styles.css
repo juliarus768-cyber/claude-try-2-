@@ -567,6 +567,11 @@ section { padding: var(--section-py) 0; }
 .who-emoji { font-size: 28px; margin-bottom: 14px; }
 .who-card h3 { font-family: var(--font-display); font-size: 19px; font-weight: 600; color: var(--navy); margin-bottom: 6px; }
 .who-card p { font-size: 13px; color: var(--muted); line-height: 1.55; }
+.who-grid-2 { grid-template-columns: repeat(2, 1fr); max-width: 760px; margin-left: auto; margin-right: auto; }
+.who-card-2 { text-align: left; padding: 40px 32px; }
+.who-card-2 p { font-size: 14px; margin-bottom: 20px; }
+.who-card-2 .who-link { font-size: 14px; font-weight: 500; color: var(--navy); text-decoration: underline; }
+@media (max-width: 768px) { .who-grid-2 { grid-template-columns: 1fr; } }
 
 /* ── SERVICES PREVIEW ── */
 .services-section { background: var(--white); }
@@ -830,6 +835,14 @@ section { padding: var(--section-py) 0; }
 .footer-col h4 { font-size: 11px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold-light); margin-bottom: 20px; }
 .footer-col a { display: block; font-size: 14px; color: rgba(255,255,255,0.5); margin-bottom: 10px; transition: color 0.15s; }
 .footer-col a:hover { color: var(--white); }
+.footer-social-link { display: flex; align-items: center; gap: 8px; }
+.footer-social-link svg { flex-shrink: 0; }
+
+/* ── Pricing/package card secondary CTA ── */
+.secondary-cta-link { display: inline-block; margin-top: 10px; font-size: 13px; color: var(--muted); text-decoration: underline; }
+.secondary-cta-link:hover { color: var(--navy); }
+.pricing-card.featured .secondary-cta-link { color: rgba(255,255,255,0.6); }
+.pricing-card.featured .secondary-cta-link:hover { color: var(--white); }
 .footer-bottom {
   border-top: 1px solid rgba(255,255,255,0.06);
   padding-top: 28px;
