@@ -1,0 +1,20 @@
+# GitHub Pages builds the repository root with Jekyll.
+# Keep local review material and unrelated projects out of the published site.
+exclude:
+  - phase1-audit
+  - PHASE-1-REPORT.md
+  - RELEASE-REVIEW.md
+  - summer-math-battle-tutor
+  - .phase1-baseline
+  - .release-preview
+  - .release-baseline
+  - node_modules
+  - vendor
+  - Gemfile
+  - Gemfile.lock
+  - .sass-cache
+  - .jekyll-cache
+  - "phase1-*.py"
+  - "phase1-*.cjs"
+  - "phase1-*-results.json"
+  - "qa-*.png"

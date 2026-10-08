@@ -16,6 +16,10 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://hiremenowresumes.ca/ru/services.html" />
   <meta property="og:image" content="https://hiremenowresumes.ca/og-image.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&amp;family=DM+Sans:wght@300;400;500;600&amp;display=swap">
+  <script src="/site.js" defer></script>
   <link rel="stylesheet" href="/styles.css">
   <script type="application/ld+json">
   {
@@ -42,6 +46,7 @@
   </script>
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 <nav class="site-nav" aria-label="Основная навигация">
   <div class="container nav-inner">
     <a href="/ru/" class="nav-logo" aria-label="Главная Hire Me Now Resumes"><img src="/hmn-logo-nav.svg" alt="Hire Me Now Resumes" width="220" height="44" loading="eager"></a>
@@ -52,7 +57,7 @@
       <li><a href="/services.html" lang="en" hreflang="en">EN</a></li>
       <li><a href="https://calendly.com/hire-me-now-resumes/15" class="nav-cta" target="_blank" rel="noopener">Записаться</a></li>
     </ul>
-    <button class="nav-hamburger" aria-label="Открыть мобильное меню" onclick="document.getElementById('mobileNav').classList.toggle('open')"><span></span><span></span><span></span></button>
+    <button class="nav-hamburger" aria-label="Открыть мобильное меню" aria-controls="mobileNav" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
   <div id="mobileNav" class="nav-mobile" role="navigation" aria-label="Мобильная навигация">
     <a href="/ru/">Главная</a><a href="/ru/services.html">Услуги</a><a href="https://diagnostic.hiremenowresumes.ca" target="_blank" rel="noopener">Диагностика резюме</a>
@@ -61,8 +66,9 @@
   </div>
 </nav>
 
-<div class="breadcrumb" aria-label="Навигационная цепочка"><div class="container breadcrumb-inner"><a href="/ru/">Главная</a><span aria-hidden="true">›</span><span aria-current="page">Услуги</span></div></div>
-<header class="page-hero" role="banner"><div class="container page-hero-inner">
+<div class="breadcrumb" aria-label="Навигационная цепочка" role="navigation"><div class="container breadcrumb-inner"><a href="/ru/">Главная</a><span aria-hidden="true">›</span><span aria-current="page">Услуги</span></div></div>
+<main class="service-packages" aria-label="Пакеты карьерных услуг" id="main-content">
+<header class="page-hero"><div class="container page-hero-inner">
   <span class="section-label" style="color:var(--gold-light);">Карьерные услуги</span>
   <h1>Стратегия для современного рынка труда</h1>
   <p>Резюме, позиционирование и практичная поддержка для тех, кто не получает откликов, меняет направление или хочет увереннее выйти на канадский рынок.</p>
@@ -73,10 +79,10 @@
   <a href="https://diagnostic.hiremenowresumes.ca" class="btn btn-primary btn-arrow" target="_blank" rel="noopener">Пройти диагностику</a>
 </div></section>
 
-<main class="service-packages" aria-label="Пакеты карьерных услуг"><div class="container">
+<div class="container">
   <div class="service-package">
-    <div class="service-package-visual"><div class="pkg-num">01</div><div class="pkg-price-big">$149 CAD</div><div class="pkg-label">Разовая стратегическая сессия</div>
-      <div class="pkg-features" role="list"><div class="pkg-feature">• Разбор резюме и LinkedIn</div><div class="pkg-feature">• Анализ текущего поиска</div><div class="pkg-feature">• План действий на 2–4 недели</div><div class="pkg-feature">• Обратная связь по целевой роли</div></div>
+    <div class="service-package-visual"><div class="pkg-num" aria-hidden="true" data-number="01"></div><div class="pkg-price-big">$149 CAD</div><div class="pkg-label">Разовая стратегическая сессия</div>
+      <div class="pkg-features" role="list"><div class="pkg-feature" role="listitem">• Разбор резюме и LinkedIn</div><div class="pkg-feature" role="listitem">• Анализ текущего поиска</div><div class="pkg-feature" role="listitem">• План действий на 2–4 недели</div><div class="pkg-feature" role="listitem">• Обратная связь по целевой роли</div></div>
     </div>
     <div class="service-content"><span class="tag">Точка старта</span><h2>Career <em>Clarity Session</em></h2>
       <p>Подходит, если вы подаёте заявки, но не получаете ожидаемого ответа. Мы разберём резюме, LinkedIn, целевые вакансии и текущий подход к поиску, чтобы определить, что мешает результату.</p>
@@ -85,8 +91,8 @@
     </div>
   </div>
   <div class="service-package reverse">
-    <div class="service-package-visual dark"><div class="pkg-num">02</div><div class="pkg-price-big">$349 CAD</div><div class="pkg-label" style="color:rgba(255,255,255,0.4);">Одна чёткая карьерная цель</div>
-      <div class="pkg-features" role="list"><div class="pkg-feature">• Стратегическая консультация</div><div class="pkg-feature">• Одно целевое резюме</div><div class="pkg-feature">• Одно сопроводительное письмо</div><div class="pkg-feature">• Позиционирование в LinkedIn</div><div class="pkg-feature">• Направление для заявок</div><div class="pkg-feature">• Заметки для интервью</div><div class="pkg-feature">• Практичные материалы для поиска</div></div>
+    <div class="service-package-visual dark"><div class="pkg-num" aria-hidden="true" data-number="02"></div><div class="pkg-price-big">$349 CAD</div><div class="pkg-label" style="color:rgba(255,255,255,0.72);">Одна чёткая карьерная цель</div>
+      <div class="pkg-features" role="list"><div class="pkg-feature" role="listitem">• Стратегическая консультация</div><div class="pkg-feature" role="listitem">• Одно целевое резюме</div><div class="pkg-feature" role="listitem">• Одно сопроводительное письмо</div><div class="pkg-feature" role="listitem">• Позиционирование в LinkedIn</div><div class="pkg-feature" role="listitem">• Направление для заявок</div><div class="pkg-feature" role="listitem">• Заметки для интервью</div><div class="pkg-feature" role="listitem">• Практичные материалы для поиска</div></div>
     </div>
     <div class="service-content"><span class="pkg-badge">Самый популярный</span><span class="tag">Рекомендуем</span><h2>Resume <em>Strategy Package</em></h2>
       <p>Для тех, кому нужны более сильное резюме, ясная профессиональная история и конкретное направление для одной основной роли.</p>
@@ -95,8 +101,8 @@
     </div>
   </div>
   <div class="service-package">
-    <div class="service-package-visual"><div class="pkg-num">03</div><div class="pkg-price-big">$549 CAD</div><div class="pkg-label">Два направления или смена карьеры</div>
-      <div class="pkg-features" role="list"><div class="pkg-feature">• Стратегическая консультация</div><div class="pkg-feature">• Два целевых резюме</div><div class="pkg-feature">• Два сопроводительных письма</div><div class="pkg-feature">• Позиционирование для двух ролей</div><div class="pkg-feature">• LinkedIn и стратегия заявок</div><div class="pkg-feature">• Подготовка к интервью</div><div class="pkg-feature">• Обратная связь в ходе работы</div><div class="pkg-feature">• Оценка предложения и переговоры</div></div>
+    <div class="service-package-visual"><div class="pkg-num" aria-hidden="true" data-number="03"></div><div class="pkg-price-big">$549 CAD</div><div class="pkg-label">Два направления или смена карьеры</div>
+      <div class="pkg-features" role="list"><div class="pkg-feature" role="listitem">• Стратегическая консультация</div><div class="pkg-feature" role="listitem">• Два целевых резюме</div><div class="pkg-feature" role="listitem">• Два сопроводительных письма</div><div class="pkg-feature" role="listitem">• Позиционирование для двух ролей</div><div class="pkg-feature" role="listitem">• LinkedIn и стратегия заявок</div><div class="pkg-feature" role="listitem">• Подготовка к интервью</div><div class="pkg-feature" role="listitem">• Обратная связь в ходе работы</div><div class="pkg-feature" role="listitem">• Оценка предложения и переговоры</div></div>
     </div>
     <div class="service-content"><span class="tag">Самый полный</span><h2>Multi-Path <em>Career Strategy</em></h2>
       <p>Для специалистов, которые рассматривают два типа ролей, планируют смену карьеры или хотят ясно представить переносимые навыки.</p>
@@ -139,10 +145,10 @@
 
 <footer class="site-footer" role="contentinfo"><div class="container"><div class="footer-inner">
   <div class="footer-brand"><a href="/ru/" class="nav-logo"><img src="/hmn-logo-nav.svg" alt="Hire Me Now Resumes" width="180" height="44"></a><p>Карьерная стратегия и поддержка в поиске работы на канадском рынке.</p></div>
-  <nav class="footer-col" aria-label="Навигация в подвале"><h4>Навигация</h4><a href="/ru/">Главная</a><a href="/ru/services.html">Услуги</a><a href="/contact.html">Контакты</a><a href="/services.html" lang="en" hreflang="en">English</a></nav>
-  <div class="footer-col"><h4>Услуги</h4><a href="/ru/services.html">Career Clarity Session</a><a href="/ru/services.html">Resume Strategy Package</a><a href="/ru/services.html">Multi-Path Career Strategy</a></div>
-  <div class="footer-col"><h4>Связь</h4><a href="https://www.facebook.com/hire.me.now.resumes" target="_blank" rel="noopener">Facebook</a><a href="https://www.instagram.com/hire_me_now_resumes" target="_blank" rel="noopener">Instagram</a><a href="https://www.linkedin.com/in/julia-cher/" target="_blank" rel="noopener">LinkedIn</a></div>
-  <div class="footer-col"><h4>Правовая информация</h4><a href="/privacy.html">Privacy Policy</a></div>
+  <nav class="footer-col" aria-label="Навигация в подвале"><h2 class="footer-heading">Навигация</h2><a href="/ru/">Главная</a><a href="/ru/services.html">Услуги</a><a href="/contact.html">Контакты</a><a href="/services.html" lang="en" hreflang="en">English</a></nav>
+  <div class="footer-col"><h2 class="footer-heading">Услуги</h2><a href="/ru/services.html">Career Clarity Session</a><a href="/ru/services.html">Resume Strategy Package</a><a href="/ru/services.html">Multi-Path Career Strategy</a></div>
+  <div class="footer-col"><h2 class="footer-heading">Связь</h2><a href="https://www.facebook.com/hire.me.now.resumes" target="_blank" rel="noopener">Facebook</a><a href="https://www.instagram.com/hire_me_now_resumes" target="_blank" rel="noopener">Instagram</a><a href="https://www.linkedin.com/in/julia-cher/" target="_blank" rel="noopener">LinkedIn</a></div>
+  <div class="footer-col"><h2 class="footer-heading">Правовая информация</h2><a href="/privacy.html">Privacy Policy</a></div>
 </div><div class="footer-bottom"><p>Hire Me Now · Toronto, Ontario, Canada · info@hiremenowresumes.ca</p><p>© 2026 Hire Me Now. Все права защищены.</p><a href="mailto:info@hiremenowresumes.ca" class="footer-email">info@hiremenowresumes.ca</a></div></div></footer>
 <script>
 function toggleFaq(btn){const item=btn.parentElement;const isOpen=item.classList.contains('open');document.querySelectorAll('.faq-item.open').forEach(el=>{el.classList.remove('open');el.querySelector('.faq-question').setAttribute('aria-expanded','false')});if(!isOpen){item.classList.add('open');btn.setAttribute('aria-expanded','true')}}

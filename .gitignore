@@ -1,0 +1,7 @@
+# Local audit evidence and generated preview fixtures, never release inputs.
+/phase1-audit/
+/PHASE-1-REPORT.md
+/RELEASE-REVIEW.md
+/.phase1-baseline/
+/.release-preview/
+/.release-baseline/
