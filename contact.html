@@ -13,6 +13,10 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://hiremenowresumes.ca/contact.html" />
   <meta property="og:image" content="https://hiremenowresumes.ca/og-image.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&amp;family=DM+Sans:wght@300;400;500;600&amp;display=swap">
+  <script src="/site.js" defer></script>
   <link rel="stylesheet" href="styles.css">
   <script type="application/ld+json">
   {
@@ -35,6 +39,7 @@
 </script>
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 
 <!-- NAV -->
 <nav class="site-nav" aria-label="Main navigation">
@@ -51,7 +56,7 @@
       <li><a href="contact.html" class="active">Contact</a></li>
       <li><a href="https://calendly.com/hire-me-now-resumes/15" class="nav-cta" target="_blank" rel="noopener" aria-label="Book a strategy call">Book a Call</a></li>
     </ul>
-    <button class="nav-hamburger" aria-label="Toggle mobile menu" onclick="document.getElementById('mobileNav').classList.toggle('open')">
+    <button class="nav-hamburger" aria-label="Toggle mobile menu" aria-controls="mobileNav" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </div>
@@ -67,7 +72,7 @@
 </nav>
 
 <!-- BREADCRUMB -->
-<div class="breadcrumb" aria-label="Breadcrumb navigation">
+<div class="breadcrumb" aria-label="Breadcrumb navigation" role="navigation">
   <div class="container breadcrumb-inner">
     <a href="/">Home</a>
     <span aria-hidden="true">›</span>
@@ -76,7 +81,8 @@
 </div>
 
 <!-- HERO -->
-<header class="page-hero" role="banner">
+<main id="main-content">
+<header class="page-hero">
   <div class="container page-hero-inner">
     <span class="section-label" style="color:var(--gold-light);">Get in touch</span>
     <h1>Start with a <em>conversation</em></h1>
@@ -84,7 +90,7 @@
   </div>
 </header>
 
-<main>
+
 <section class="contact-section" aria-labelledby="contact-heading">
   <div class="container">
     <div class="contact-grid">
@@ -97,7 +103,7 @@
         <div class="contact-detail">
           <div class="contact-icon" aria-hidden="true">✉</div>
           <div class="contact-detail-text">
-            <h4>Email</h4>
+            <h3>Email</h3>
             <a href="mailto:info@hiremenowresumes.ca" aria-label="Email Hire Me Now">info@hiremenowresumes.ca</a>
           </div>
         </div>
@@ -105,7 +111,7 @@
         <div class="contact-detail">
           <div class="contact-icon" aria-hidden="true">🌍</div>
           <div class="contact-detail-text">
-            <h4>Location</h4>
+            <h3>Location</h3>
             <p>Remote — serving all of Canada</p>
           </div>
         </div>
@@ -113,7 +119,7 @@
         <div class="contact-detail">
           <div class="contact-icon" aria-hidden="true">⏱</div>
           <div class="contact-detail-text">
-            <h4>Response time</h4>
+            <h3>Response time</h3>
             <p>Typically within 1 business day</p>
           </div>
         </div>
@@ -150,7 +156,7 @@
           <form action="https://formsubmit.co/info@hiremenowresumes.ca" method="POST" class="contact-form">
             <input type="hidden" name="_next" value="https://hiremenowresumes.ca/thanks.html">
             <input type="hidden" name="_subject" value="New inquiry — hiremenowresumes.ca">
-            <input type="hidden" name="_captcha" value="false">
+            <input type="text" name="_honey" class="form-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
             <input type="hidden" name="_template" value="table">
             <div class="form-row">
               <div class="form-group">
@@ -197,7 +203,7 @@
         <div class="calendly-placeholder" role="region" aria-label="Book a free strategy call">
           <h3>Book a Free 15-Min Strategy Call</h3>
           <p>Skip the form — pick a time that works for you and we'll talk through your situation directly.</p>
-          <a href="https://calendly.com/hire-me-now-resumes/15" class="btn btn-outline-white" aria-label="Request a free strategy call via email">Request a Call Time →</a>
+          <a href="https://calendly.com/hire-me-now-resumes/15" class="btn btn-outline-white" aria-label="Book a free strategy call on Calendly">Request a Call Time →</a>
           <p style="margin-top:12px;"><a href="mailto:info@hiremenowresumes.ca" aria-label="Email us directly" style="color:rgba(255,255,255,0.9); font-weight:500;">Email Us Directly</a></p>
         </div>
 
@@ -218,7 +224,7 @@
         <p>Career strategy and job search coaching for newcomers, students, and professionals navigating the Canadian labour market.</p>
       </div>
       <nav class="footer-col" aria-label="Footer navigation">
-        <h4>Navigation</h4>
+        <h2 class="footer-heading">Navigation</h2>
         <a href="/">Home</a>
         <a href="services.html">Services</a>
         <a href="https://diagnostic.hiremenowresumes.ca" target="_blank" rel="noopener">Free Resume Diagnostic</a>
@@ -228,19 +234,19 @@
         <a href="https://calendly.com/hire-me-now-resumes/15" target="_blank" rel="noopener">Book a Call</a>
       </nav>
       <div class="footer-col">
-        <h4>Services</h4>
+        <h2 class="footer-heading">Services</h2>
         <a href="services.html">Career Clarity Session</a>
         <a href="services.html">Strategy Package</a>
         <a href="services.html">Multi-Path</a>
       </div>
       <div class="footer-col">
-        <h4>Connect</h4>
+        <h2 class="footer-heading">Connect</h2>
         <a href="https://www.facebook.com/hire.me.now.resumes" target="_blank" rel="noopener" class="footer-social-link" aria-label="Hire Me Now Resumes on Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12.06C22 6.51 17.52 2 12 2S2 6.51 2 12.06c0 5 3.66 9.15 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.51 1.49-3.9 3.77-3.9 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.87h2.78l-.44 2.91h-2.34V22c4.78-.79 8.44-4.94 8.44-9.94z"/></svg>Facebook</a>
         <a href="https://www.instagram.com/hire_me_now_resumes" target="_blank" rel="noopener" class="footer-social-link" aria-label="Hire Me Now Resumes on Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/></svg>Instagram</a>
         <a href="https://www.linkedin.com/in/julia-cher/" target="_blank" rel="noopener" class="footer-social-link" aria-label="Julia Cher on LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zM8.34 18.34H5.67V9.75h2.67v8.59zM7 8.6a1.55 1.55 0 1 1 0-3.1 1.55 1.55 0 0 1 0 3.1zm11.34 9.74h-2.67v-4.18c0-1-.02-2.28-1.39-2.28-1.4 0-1.61 1.09-1.61 2.21v4.25H9.99V9.75h2.56v1.17h.04c.36-.68 1.23-1.39 2.53-1.39 2.71 0 3.21 1.78 3.21 4.09v4.72z"/></svg>LinkedIn</a>
       </div>
       <div class="footer-col">
-        <h4>Legal</h4>
+        <h2 class="footer-heading">Legal</h2>
         <a href="privacy.html">Privacy Policy</a>
       </div>
     </div>
