@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
         : 'content';
 
     if (destination.hostname === 'calendly.com' &&
-        destination.pathname.replace(/\\/$/, '') === '/hire-me-now-resumes/15') {
+        (destination.pathname === '/hire-me-now-resumes/15' || destination.pathname === '/hire-me-now-resumes/15/')) {
       track('booking_click', { destination_type: 'calendly', site_section: section });
     } else if (destination.hostname === 'diagnostic.hiremenowresumes.ca') {
       track('diagnostic_click', { destination_type: 'career_diagnostic', site_section: section });
