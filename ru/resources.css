@@ -1,0 +1,49 @@
+/* Article and resources-only presentation for Russian content.
+   Scoped to new /ru/ resources pages; does not change the existing site. */
+.ru-reading {
+  max-width: 860px;
+  font-size: 16px;
+  line-height: 1.8;
+}
+.ru-reading p { margin: 0 0 17px; }
+.ru-reading h2 {
+  margin: 34px 0 14px;
+  font-family: var(--font-display);
+  font-size: clamp(29px, 3.2vw, 38px);
+  font-weight: 500;
+  line-height: 1.22;
+  color: var(--navy);
+}
+.ru-reading h3 {
+  margin: 23px 0 12px;
+  font-family: var(--font-body);
+  font-size: 18px;
+  line-height: 1.4;
+  color: var(--navy);
+}
+.ru-reading ul,
+.ru-reading ol {
+  margin: 0 0 24px;
+  padding-left: 25px;
+}
+.ru-reading ul { list-style: disc; }
+.ru-reading ol { list-style: decimal; }
+.ru-reading li { margin: 0 0 10px; padding-left: 3px; }
+.ru-reading a:not(.btn) { color: #144b77; text-decoration: underline; text-underline-offset: 2px; }
+.ru-reading a:not(.btn):hover { color: #0c1b33; }
+.ru-reading .article-byline { color: var(--muted); }
+.ru-reading section { margin-top: 34px; }
+.ru-resource-grid .pricing-card { display: flex; flex-direction: column; gap: 14px; height: 100%; }
+.ru-resource-grid .pricing-name {
+  font-family: var(--font-display);
+  font-size: clamp(27px, 2.7vw, 35px);
+  line-height: 1.17;
+  color: var(--navy);
+}
+.ru-resource-grid .pricing-desc { color: var(--muted); line-height: 1.65; margin: 0 0 12px; }
+.ru-resource-grid .pricing-card .btn { align-self: flex-start; margin-top: auto; }
+@media (max-width: 600px) {
+  .ru-reading { font-size: 15px; }
+  .ru-reading h2 { margin-top: 29px; }
+  .ru-resource-grid .pricing-card { padding: 26px 24px; }
+}
