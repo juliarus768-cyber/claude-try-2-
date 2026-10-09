@@ -19,11 +19,21 @@ Multilingual support is available in English, Russian, Spanish, Hebrew, Cantones
 - International students and new graduates entering the Canadian workforce
 - Career changers building a clear story around transferable skills
 - Professionals applying without results who need a focused strategy
-- Students, teens, and families planning early career decisions
 
 ## Key Pages
 - [Home](https://hiremenowresumes.ca/): Overview of services, method, and client results
 - [Services](https://hiremenowresumes.ca/services.html): Full service descriptions, pricing, comparison table, and FAQ
+- [Resume Writing](https://hiremenowresumes.ca/resume-writing-services.html): Targeted resume and cover letter packages
+- [Career Resources](https://hiremenowresumes.ca/resources.html): Career and job-search articles
+- [Free Career Positioning Diagnostic](https://diagnostic.hiremenowresumes.ca/): Directional career-positioning review based on pasted resume text
+- [Russian Home](https://hiremenowresumes.ca/ru/): Russian-language introduction
+- [Russian Services](https://hiremenowresumes.ca/ru/services.html): Russian-language service overview
+- [ATS Resume Tips](https://hiremenowresumes.ca/ats-resume-tips-canadian-job-seekers.html): Formatting and applicant tracking guidance
+- [Employment Gaps](https://hiremenowresumes.ca/how-to-explain-employment-gaps-canadian-resume.html): Honest Canadian resume gap explanations
+- [Cover Letters](https://hiremenowresumes.ca/do-you-still-need-cover-letter-canada.html): When and how to use a cover letter
+- [Resume Design](https://hiremenowresumes.ca/resume-photo-fancy-design-canada.html): Canadian resume photos and ATS-friendly design
+- [Interview STAR Method](https://hiremenowresumes.ca/why-employers-dont-call-back-after-interview-star-method.html): Interview answer preparation
+- [LinkedIn Optimization](https://hiremenowresumes.ca/optimize-linkedin-canadian-job-market.html): Profile positioning advice
 - [About](https://hiremenowresumes.ca/about.html): Julia Cher's background, credentials, team, and multilingual support
 - [Contact](https://hiremenowresumes.ca/contact.html): Book a free 15-minute fit call or send a message
 - [Privacy Policy](https://hiremenowresumes.ca/privacy.html): Information about personal data handling, website analytics consent, and privacy inquiries
