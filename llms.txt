@@ -28,6 +28,11 @@ Multilingual support is available in English, Russian, Spanish, Hebrew, Cantones
 - [Free Career Positioning Diagnostic](https://diagnostic.hiremenowresumes.ca/): Directional career-positioning review based on pasted resume text
 - [Russian Home](https://hiremenowresumes.ca/ru/): Russian-language introduction
 - [Russian Services](https://hiremenowresumes.ca/ru/services.html): Russian-language service overview
+- [Russian Resources](https://hiremenowresumes.ca/ru/resources.html): Guides to Canadian resumes, ATS and career transitions in Russian
+- [Canadian Resume Guide (Russian)](https://hiremenowresumes.ca/ru/kak-sostavit-rezume-v-kanade.html): Resume format and international experience
+- [Canadian Resume vs European CV (Russian)](https://hiremenowresumes.ca/ru/kanadskoe-rezume-i-evropeyskoe-cv.html): Differences explained with Europass context
+- [ATS Resume Guide (Russian)](https://hiremenowresumes.ca/ru/ats-rezume-kanada.html): ATS-friendly structure and job keywords
+- [Employment Gaps (Russian)](https://hiremenowresumes.ca/ru/pereryv-v-rabote-rezume-kanada.html): Career break explanations
 - [ATS Resume Tips](https://hiremenowresumes.ca/ats-resume-tips-canadian-job-seekers.html): Formatting and applicant tracking guidance
 - [Employment Gaps](https://hiremenowresumes.ca/how-to-explain-employment-gaps-canadian-resume.html): Honest Canadian resume gap explanations
 - [Cover Letters](https://hiremenowresumes.ca/do-you-still-need-cover-letter-canada.html): When and how to use a cover letter
