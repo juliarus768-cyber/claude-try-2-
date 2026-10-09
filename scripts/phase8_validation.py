@@ -75,6 +75,14 @@ one('What Contact Information Should Be on a Canadian Resume?' in enh,"English c
 one('Choose a Clear Resume Title and Describe Your Past Roles Honestly' in enh,"English title content")
 one('What should an ATS-friendly resume look like?' in enh,"English layout content")
 one('ats-article-content' in enh,"English reading styles")
+# The Russian PR was reconciled with the already merged English article:
+# ensure that BOTH edits survive in the same file.
+reh,redoc=load(RUS,"ats-resume-tips-canadian-job-seekers.html")
+one('Choose a Clear Resume Title and Describe Your Past Roles Honestly' in reh,"Combined ATS title guidance preserved")
+one('What Contact Information Should Be on a Canadian Resume?' in reh,"Combined ATS contact guidance preserved")
+one('What should an ATS-friendly resume look like?' in reh,"Combined ATS outline preserved")
+one('ats-article-content' in reh,"Combined ATS list style preserved")
+one('href="/ru/ats-rezume-kanada.html" lang="ru"' in reh,"Combined ATS Russian link exists")
 one(any(x.get("@type")=="Article" and x.get("dateModified")=="2026-10-09" for x in edoc.ld),"English update metadata")
 # Reciprocal language links should be on each indexed counterpart (on RU branch).
 for en,ru in {
