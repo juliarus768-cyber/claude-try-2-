@@ -26,7 +26,7 @@ Multilingual support is available in English, Russian, Spanish, Hebrew, Cantones
 - [Services](https://hiremenowresumes.ca/services.html): Full service descriptions, pricing, comparison table, and FAQ
 - [About](https://hiremenowresumes.ca/about.html): Julia Cher's background, credentials, team, and multilingual support
 - [Contact](https://hiremenowresumes.ca/contact.html): Book a free 15-minute fit call or send a message
-- [Privacy Policy](https://hiremenowresumes.ca/privacy.html): PIPEDA-compliant privacy policy
+- [Privacy Policy](https://hiremenowresumes.ca/privacy.html): Information about personal data handling, website analytics consent, and privacy inquiries
 
 ## Founder
 Julia Cher is the founder and lead strategist at Hire Me Now. Julia Cher holds two credentials from Career Professionals of Canada (CPC): Certified Career Practitioner and Certified Resume Strategist (CRS). She has over 15 years of experience helping job seekers compete in the Canadian labour market across industries and career levels.
