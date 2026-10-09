@@ -32,6 +32,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const preferenceKey = 'hmn_analytics_consent_v1';
   let choice = 'unset';
   let started = false;
+  let analyticsReady = false;
+  const analyticsReadyCallbacks = [];
 
   try {
     const saved = window.localStorage.getItem(preferenceKey);
@@ -44,7 +46,13 @@ document.addEventListener('DOMContentLoaded', () => {
     return choice === 'accepted';
   }
 
-  window.HMNConsent = { isGranted };
+  function whenAnalyticsReady(callback) {
+    if (!isGranted()) return;
+    if (analyticsReady) callback();
+    else analyticsReadyCallbacks.push(callback);
+  }
+
+  window.HMNConsent = { isGranted, whenAnalyticsReady };
 
   function remember(next) {
     choice = next;
@@ -91,6 +99,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const tag = document.createElement('script');
     tag.async = true;
     tag.src = 'https://www.googletagmanager.com/gtag/js?id=' + measurementId;
+    tag.addEventListener('load', () => {
+      if (!isGranted()) return;
+      analyticsReady = true;
+      analyticsReadyCallbacks.splice(0).forEach((callback) => callback());
+    });
     document.head.appendChild(tag);
   }
 
@@ -213,14 +226,34 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Redirect-confirmed form inquiry, not guaranteed email delivery.
+  // Redirect-confirmed inquiry, not guaranteed email delivery.
+  // Wait for the Analytics script to load before consuming the lead marker.
   if (window.location.pathname === '/thanks.html') {
     try {
       const submittedAt = Number(window.sessionStorage.getItem(pendingContactKey));
-      window.sessionStorage.removeItem(pendingContactKey);
       const age = Date.now() - submittedAt;
-      if (submittedAt > 0 && age >= 0 && age < pendingTtlMs) {
-        track('generate_lead', { lead_source: 'website_contact_form' });
+      if (!(submittedAt > 0 && age >= 0 && age < pendingTtlMs)) {
+        window.sessionStorage.removeItem(pendingContactKey);
+      } else if (!window.HMNConsent || !window.HMNConsent.isGranted()) {
+        // Do not record a lead without analytics consent.
+        window.sessionStorage.removeItem(pendingContactKey);
+      } else {
+        window.HMNConsent.whenAnalyticsReady(() => {
+          try {
+            if (!window.HMNConsent.isGranted()) return;
+            const stillPending = Number(window.sessionStorage.getItem(pendingContactKey));
+            const elapsed = Date.now() - stillPending;
+            if (stillPending !== submittedAt || elapsed < 0 || elapsed >= pendingTtlMs) {
+              window.sessionStorage.removeItem(pendingContactKey);
+              return;
+            }
+            if (typeof window.gtag !== 'function') return;
+            window.sessionStorage.removeItem(pendingContactKey);
+            track('generate_lead', { lead_source: 'website_contact_form' });
+          } catch (_) {
+            // Disabled storage cannot interfere with normal navigation.
+          }
+        });
       }
     } catch (_) {
       // Direct visits or disabled storage are not counted as leads.
