@@ -1,0 +1,30 @@
+name: Phase 8 draft page validation
+on:
+  push:
+    branches:
+      - phase8-review-validation
+
+permissions:
+  contents: read
+
+jobs:
+  validation:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Checkout validation script
+        uses: actions/checkout@v4
+        with:
+          path: qa
+      - name: Checkout English draft
+        uses: actions/checkout@v4
+        with:
+          ref: phase-8-english-ats-query-improvements
+          path: eng
+      - name: Checkout Russian draft
+        uses: actions/checkout@v4
+        with:
+          ref: phase-8-russian-resources-and-cv-guide
+          path: rus
+      - name: Check navigation, links, metadata, hreflang and sitemap
+        run: python3 qa/scripts/phase8_validation.py
