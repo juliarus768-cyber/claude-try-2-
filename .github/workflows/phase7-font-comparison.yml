@@ -1,0 +1,76 @@
+name: Phase 7 font-loading comparison (preview only)
+on:
+  push:
+    branches:
+      - phase-7-external-font-preview
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  compare:
+    name: Lighthouse baseline vs optimized, mobile
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Serve both preview files locally
+        run: |
+          python3 -m http.server 8989 --bind 127.0.0.1 >/tmp/phase7-server.log 2>&1 &
+          echo $! >/tmp/phase7-server.pid
+          sleep 2
+          curl -fsS http://127.0.0.1:8989/baseline.html >/dev/null
+          curl -fsS http://127.0.0.1:8989/optimized.html >/dev/null
+      - name: Compare on the same runner with Lighthouse mobile
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p reports
+          echo "Using Google Chrome: $(command -v google-chrome || command -v chromium)"
+          npm install --no-save lighthouse@13
+          for iteration in 1 2 3; do
+            if [ "$iteration" = "2" ]; then
+              order="optimized baseline"
+            else
+              order="baseline optimized"
+            fi
+            for variant in $order; do
+              echo "Run $iteration — $variant"
+              node_modules/.bin/lighthouse "http://127.0.0.1:8989/${variant}.html" \
+                --chrome-flags="--headless --no-sandbox --disable-dev-shm-usage" \
+                --only-categories=performance \
+                --output=json \
+                --output-path="reports/${variant}-${iteration}.json" \
+                --quiet
+            done
+          done
+          node - <<'JS'
+          const fs=require('fs');
+          const metrics={
+            fcp:'first-contentful-paint',
+            lcp:'largest-contentful-paint',
+            cls:'cumulative-layout-shift',
+            tbt:'total-blocking-time',
+            speedIndex:'speed-index'
+          };
+          const median=items=>[...items].sort((a,b)=>a-b)[Math.floor(items.length/2)];
+          for(const variant of ['baseline','optimized']){
+            const r=[1,2,3].map(i=>JSON.parse(fs.readFileSync(`reports/${variant}-${i}.json`,'utf8')));
+            const summary={variant,score:median(r.map(x=>Math.round(x.categories.performance.score*100)))};
+            for(const [name,id] of Object.entries(metrics)){
+              summary[name]=Number(median(r.map(x=>x.audits[id].numericValue)).toFixed(name==='cls'?3:0));
+            }
+            console.log('RESULT '+JSON.stringify(summary));
+          }
+          JS
+      - name: Upload reports for inspection
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: phase7-font-lighthouse-reports
+          path: reports/*.json
+          if-no-files-found: ignore
