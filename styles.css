@@ -316,6 +316,15 @@ ul { list-style: none; }
     width: min(100%, 220px);
     margin: 18px auto 0;
   }
+  /* English homepage only: bring the two actions ahead of detailed qualifications. */
+  .hero-mobile-compact { padding: 40px 0 48px; }
+  .hero-mobile-compact .hero-copy { display: flex; flex-direction: column; }
+  .hero-mobile-compact .hero-badge { margin-bottom: 20px; }
+  .hero-mobile-compact h1 { margin-bottom: 0; }
+  .hero-mobile-compact .hero-sub:not(.hero-supporting-copy) { margin-bottom: 16px; }
+  .hero-mobile-compact .hero-ctas { flex-direction: column; gap: 12px; }
+  .hero-mobile-compact .hero-ctas .btn { justify-content: center; min-height: 48px; }
+  .hero-mobile-compact .hero-supporting-copy { order: 1; margin: 24px 0 0; }
 }
 
 /* ── DIAGNOSTIC CTA ── */
