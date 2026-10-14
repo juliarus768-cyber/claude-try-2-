@@ -169,7 +169,7 @@ ul { list-style: none; }
   .nav-cta { padding-left: 12px; padding-right: 12px; }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 960px) {
   .nav-links { display: none; }
   .nav-hamburger { display: flex; }
   .nav-mobile {
