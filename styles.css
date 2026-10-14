@@ -1294,3 +1294,9 @@ article.container { overflow-wrap: anywhere; }
   .analytics-consent-actions { margin-top: 12px; display: grid; grid-template-columns: 1fr 1fr; }
   .analytics-consent-actions button { padding: 10px 8px; }
 }
+
+/* Keep the privacy analytics heading clear of the sticky navigation. */
+#website-analytics { scroll-margin-top: 100px; }
+
+/* Keep article links to Optional Add-Ons visible below the sticky navigation. */
+#addons { scroll-margin-top: 200px; }
