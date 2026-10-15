@@ -991,6 +991,19 @@ section { padding: var(--section-py) 0; }
 .addon-card h3 { font-family: var(--font-display); font-size: 18px; font-weight: 600; color: var(--navy); margin-bottom: 6px; }
 .addon-card p { font-size: 13px; color: var(--muted); line-height: 1.55; }
 
+/* Phase 9E service details use the existing card colours and spacing. */
+.program-details { max-width: 900px; margin: 36px auto 0; }
+.program-details h3, .policy-block h3 { font-family: var(--font-display); font-size: 23px; color: var(--navy); margin-bottom: 12px; }
+.program-details p, .policy-block p { color: var(--muted); line-height: 1.7; margin-bottom: 16px; }
+.program-details .btn { margin-top: 10px; }
+.policy-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; margin-top: 44px; }
+.policy-block { min-width: 0; background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 28px; }
+.policy-payment { max-width: 900px; margin: 28px auto 0; }
+.policy-block details { border-top: 1px solid var(--border); padding: 14px 0; }
+.policy-block details summary { color: var(--navy); font-weight: 600; cursor: pointer; }
+.policy-block details p { margin: 12px 0 0; }
+@media (max-width: 768px) { .policy-grid { grid-template-columns: 1fr; } }
+
 /* ── FAQ ── */
 .faq-section { background: var(--white); }
 .faq-list { max-width: 760px; margin: 48px auto 0; }
