@@ -18,3 +18,5 @@ exclude:
   - "phase1-*.cjs"
   - "phase1-*-results.json"
   - "qa-*.png"
+  - docs
+  - scripts
