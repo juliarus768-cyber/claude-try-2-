@@ -2,6 +2,8 @@
 
 Planning window: November 2026–January 2027. Six proposed articles, two per month. These are briefs, not published articles or scheduled automations. All examples must be explicitly illustrative unless Julia supplies permission and verified client material. Check current inventory again before drafting.
 
+Phase 2 update: the first two briefs have been developed into finished English drafts at `/international-work-experience-canadian-resume.html` and `/explain-foreign-job-titles-canadian-resume.html` for the current review PR. They are not yet claimed live; publication depends on separate approval and deployment. The remaining four briefs stay in the roadmap. Russian versions have not been created.
+
 Existing English coverage: ATS formatting, resume design/photos, employment gaps, cover letters, LinkedIn and interview STAR responses. Existing Russian coverage: resume structure, ATS, gaps and Canadian resume versus European CV. Newcomer landing pages cover the service journey. The articles below should add worked examples and decision tools, not repeat those pages.
 
 ## November 2026 — make international experience legible

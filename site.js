@@ -203,6 +203,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const section = link.closest('.site-nav, .nav-mobile') ? 'navigation' :
       link.closest('.site-footer') ? 'footer' : 'content';
 
+    // Measure content-to-service interest separately from outbound booking clicks.
+    // Fixed page/service identifiers only; never include arbitrary URLs or form data.
+    const contentSources = {
+      '/international-work-experience-canadian-resume.html': 'international_experience_article',
+      '/explain-foreign-job-titles-canadian-resume.html': 'foreign_titles_article',
+      '/canadian-resume-newcomers.html': 'newcomer_page'
+    };
+    const source = contentSources[window.location.pathname];
+    if (source && link.closest('main') && destination.origin === window.location.origin &&
+        ['/services.html', '/resume-writing-services.html'].includes(destination.pathname)) {
+      const targets = { '#career-clarity': 'career-clarity', '#resume-strategy': 'resume-strategy', '#multi-path': 'multi-path' };
+      const service = targets[destination.hash] || (destination.pathname === '/resume-writing-services.html' ? 'resume_writing' : 'services_overview');
+      track('service_click', { source_content: source, service_interest: service });
+    }
+
     if (destination.hostname === 'calendly.com' &&
         (destination.pathname === '/hire-me-now-resumes/15' ||
          destination.pathname === '/hire-me-now-resumes/15/')) {

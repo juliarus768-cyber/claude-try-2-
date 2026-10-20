@@ -63,4 +63,20 @@ for url in locs:
     f=ROOT/urlsplit(url).path.lstrip('/')
     if f.is_dir(): f=f/'index.html'
     assert f.is_file(), ('Missing sitemap destination',url)
+ARTICLES = ['international-work-experience-canadian-resume.html', 'explain-foreign-job-titles-canadian-resume.html']
+for file in ARTICLES:
+    p=pages[file]
+    assert p.canonical==[BASE+'/'+file], (file,'article canonical')
+    assert not p.alternates, (file,'no untranslated alternate articles')
+    articles=[s for s in p.json if s.get('@type')=='Article']
+    assert len(articles)==1, (file,'Article schema count')
+    schema=articles[0]
+    assert schema['mainEntityOfPage']==p.canonical[0]
+    assert schema['author']['name']=='Julia Cher' and schema['inLanguage']=='en'
+    source=(ROOT/file).read_text(encoding='utf-8')
+    assert f'datetime="{schema["datePublished"]}"' in source, (file,'visible/schema date match')
+    assert BASE+'/'+file in locs and '/'+file in (ROOT/'resources.html').read_text(encoding='utf-8')
+    assert 'fictional' in source.lower(), (file,'label examples')
+    assert not any(b>a+1 for a,b in zip(p.heading_levels,p.heading_levels[1:])), (file,'heading skip')
 print(f'PASS: {len(pages)} pages; internal links/fragments, H1s, metadata, JSON-LD, newcomer hreflang/headings, sitemap XML and destinations')
+print('PASS: two English articles; Article schema, canonical, byline/date, resources/sitemap entries and heading order')
