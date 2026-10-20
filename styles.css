@@ -1313,3 +1313,31 @@ article.container { overflow-wrap: anywhere; }
 
 /* Keep article links to Optional Add-Ons visible below the sticky navigation. */
 #addons { scroll-margin-top: 200px; }
+
+/* Targeted additions reuse the established brand and responsive page components. */
+.newcomer-entry { background: var(--cream); padding: 48px 0; }
+.newcomer-entry p { max-width: 720px; margin: 18px 0 24px; }
+.newcomer-page .page-hero p { max-width: 760px; }
+.newcomer-page .page-hero .section-label { color: var(--gold-light); }
+.newcomer-content { max-width: 860px; padding-top: 40px; padding-bottom: 64px; }
+.newcomer-content section { padding: 0; margin: 0 0 40px; }
+.newcomer-content h2 { font-family: var(--font-display); font-size: clamp(28px, 4vw, 38px); color: var(--navy); line-height: 1.2; margin-bottom: 18px; }
+.newcomer-content h3 { font-size: 20px; color: var(--navy); margin-bottom: 12px; }
+.newcomer-content p, .newcomer-content ul { margin-bottom: 18px; line-height: 1.75; }
+.newcomer-content ul { padding-left: 24px; }
+.newcomer-content li { margin-bottom: 12px; }
+.newcomer-content a { text-decoration: underline; text-underline-offset: 3px; }
+.wording-example { background: var(--cream); border-left: 3px solid var(--gold); padding: 24px; }
+.newcomer-content details { border-bottom: 1px solid var(--border); padding: 16px 0; }
+.newcomer-content summary { cursor: pointer; font-weight: 500; color: var(--navy); min-height: 44px; }
+.newcomer-content details p { margin-top: 12px; }
+.package-next-step { max-width: 850px; padding: 24px 0; line-height: 1.7; }
+/* Longer, descriptive hero headings retain the existing image and grid. */
+.hero-copy h1 { font-size: clamp(36px, 4.5vw, 58px); }
+
+.newcomer-content ul { list-style: disc; }
+.newcomer-page .hero-ctas { margin-top: 24px; }
+
+/* Verified credentials remain readable near the heading, without another hero panel. */
+.hero-credentials { color: var(--gold-light); font-size: 14px; line-height: 1.6; max-width: 540px; margin: 0 0 20px; }
+.service-package .btn, .pricing-card .btn { max-width: 100%; }

@@ -206,7 +206,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (destination.hostname === 'calendly.com' &&
         (destination.pathname === '/hire-me-now-resumes/15' ||
          destination.pathname === '/hire-me-now-resumes/15/')) {
-      track('booking_click', { destination_type: 'calendly', site_section: section });
+      const service = link.dataset.service;
+      const context = ['career-clarity', 'resume-strategy', 'multi-path'].includes(service) ? service : 'unspecified';
+      track('booking_click', { destination_type: 'calendly', site_section: section, service_interest: context });
     } else if (destination.hostname === 'diagnostic.hiremenowresumes.ca') {
       track('diagnostic_click', { destination_type: 'career_diagnostic', site_section: section });
     }
@@ -259,4 +261,17 @@ document.addEventListener('DOMContentLoaded', () => {
       // Direct visits or disabled storage are not counted as leads.
     }
   }
+});
+
+// Carry an explicitly selected service into the existing inquiry form.
+document.addEventListener('DOMContentLoaded', () => {
+  const select = document.getElementById('help-with');
+  if (!select) return;
+  const services = new Map([
+    ['career-clarity', 'Career Clarity Session'],
+    ['resume-strategy', 'Resume Strategy Package'],
+    ['multi-path', 'Multi-Path Career Strategy']
+  ]);
+  const value = services.get(new URLSearchParams(window.location.search).get('service'));
+  if (value && Array.from(select.options).some(option => option.value === value)) select.value = value;
 });
