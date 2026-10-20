@@ -2,6 +2,14 @@
 
 Prepared October 20, 2026. No production deployment is authorized in this phase.
 
+## Pre-merge refinement
+
+PR #73 now retains Toronto in the homepage SEO/Open Graph title. The H1, description and service-area copy continue to address clients across Canada. Both homepages identify Julia Cher and Career Professionals of Canada (CPC) near the heading, with a compact line showing the verified Certified Career Practitioner and Certified Resume Strategist (CRS) credentials.
+
+Package booking buttons on the English/Russian homepages and services pages and the English resume-writing page explicitly identify a free 15-minute introductory call. Accessible names retain the package name; existing destinations and service context remain intact. Scope explanations distinguish the call from paid coaching and writing. Prices and inclusions have not changed. Newcomer copy received focused wording edits without new service claims.
+
+The bilingual analytics audit and prerequisites for a future Russian opt-in extension are in `ANALYTICS-LANGUAGE-AUDIT.md`. Tracking remains English-only; the refinement makes no analytics-code changes. See `QA-RESULTS.md` for the rerun and manual verification requirements.
+
 ## Baseline and audit
 
 Implementation uses current GitHub `main` at `22f8e1245c139b074bb9ae7a0dc0d0aa33cc65bb`. The original workspace is older and has unrelated uncommitted changes; those were preserved. Changes live in the isolated `phase1-audit/seo-conversion-worktree` checkout on `codex/seo-conversion-phase1`.
@@ -15,7 +23,7 @@ Findings and changes:
 - The homepage hero emphasized international experience without immediately naming the service. It now identifies resume writing and career coaching and explicitly includes Canadian professionals and career changers. The main CTA goes to the existing resume-writing page; the secondary CTA retains Calendly.
 - Two English homepage sections repeated the diagnostic journey. The later duplicate was removed; the early diagnostic entry remains, with a new newcomer entry before the pain-points section.
 - A useful English newcomer service page was missing. Added `/canadian-resume-newcomers.html` and a complete Russian counterpart at `/ru/rezume-dlya-novichkov-v-kanade.html`. They explain titles, employers, credentials, international CV differences, transferable skills, posting-specific targeting, package selection and consultation scope. Examples are explicitly fictional and illustrative.
-- Existing packages were verified against current main and the live service page: Career Clarity Session $149 CAD, Resume Strategy Package $349 CAD, Multi-Path Career Strategy $549 CAD, HST included. Their descriptions and inclusions are preserved. Package buttons now describe the visitor's intent, and explanatory copy distinguishes the free call from paid work.
+- Existing packages were verified against current main and the live service page: Career Clarity Session $149 CAD, Resume Strategy Package $349 CAD, Multi-Path Career Strategy $549 CAD, HST included. Their descriptions and inclusions are preserved. Package buttons explicitly identify the free introductory call, and explanatory copy distinguishes the call from paid work.
 - Package contact links preselect a package in the existing inquiry form using an allowlisted `service` parameter. Calendly's working destination is preserved without inventing package URLs or relying on unsupported booking parameters. `data-service` adds context to the existing consented click event; it does not send service selection to Calendly. Visitors are told to name their preferred service when booking.
 - Current main already uses consistent English header/mobile labels, including Services, Resources and Free Resume Diagnostic. Russian navigation uses Услуги, Материалы and Диагностика резюме. Preserve these familiar labels. Standardized English diagnostic prose and retained all existing destinations. Footer service links target package anchors; Russian service anchors are now available. Added newcomer links in footers rather than crowding the main menu. Russian about/contact/privacy destinations remain English because Russian equivalents do not exist.
 - New pages use unique titles/descriptions, self-canonicals, WebPage structured data, reciprocal en/ru/x-default hreflang, and language switchers. Existing structured data is retained. Sitemap dates changed only for modified pages; the new pages were added. `robots.txt` and verification files remain unchanged.

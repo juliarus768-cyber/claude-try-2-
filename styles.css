@@ -1337,3 +1337,7 @@ article.container { overflow-wrap: anywhere; }
 
 .newcomer-content ul { list-style: disc; }
 .newcomer-page .hero-ctas { margin-top: 24px; }
+
+/* Verified credentials remain readable near the heading, without another hero panel. */
+.hero-credentials { color: var(--gold-light); font-size: 14px; line-height: 1.6; max-width: 540px; margin: 0 0 20px; }
+.service-package .btn, .pricing-card .btn { max-width: 100%; }

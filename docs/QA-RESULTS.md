@@ -2,6 +2,20 @@
 
 Date: October 20, 2026. Base: GitHub main `22f8e1245c139b074bb9ae7a0dc0d0aa33cc65bb`.
 
+## Pre-merge refinement checks
+
+Refinement comparison: PR head `1d54fd9f43da4976e19205440e5398eeebdadb9b`. Re-ran 69 browser page/viewport checks across all 23 pages at 375/768/1440px: passed, including links/fragments, metadata, one H1, JSON-LD, missing images, overflow, mobile-menu behavior and JavaScript errors. Re-ran 24 axe accessibility checks on both homepages, both services pages, contact, resume writing and the two newcomer pages at those widths: zero violations. Native FAQ keyboard behavior and reciprocal language links passed.
+
+English and Russian package-block comparisons, fixed booking destinations, all three inquiry prefills, intercepted form POST, existing analytics dispatch and lead deduplication passed again. The structural/SEO script, JavaScript syntax and Git whitespace checks passed. No build/dependency command was added to the buildless site.
+
+A separate final comparison verified unchanged package content against main on all five package-card pages (both homepages, both services pages and the English resume-writing page). All 14 package booking buttons name the free 15-minute introductory call and keep a package-specific accessible name. The Toronto title and Canada-wide description were asserted, and both homepages' credential lines were visible before the hero actions at 375/1440px.
+
+An expanded consent audit passed for fresh/rejected/accepted states, footer withdrawal, explicit cross-tab state changes, invalid initial preferences, blocked storage, and English/Russian navigation. All eight Russian pages remained untracked with unset, accepted or rejected English preferences. No real analytics requests or form submissions were sent. The audit's coverage and limitations are documented in `ANALYTICS-LANGUAGE-AUDIT.md`.
+
+Reviewed the English and Russian additions against the existing service descriptions. Retained exact package names, prices, tax statements, document counts, language support and distinctions between free and paid work. Existing article body changes remain limited to diagnostic terminology; new examples remain explicitly illustrative. Reviewed desktop/mobile screenshots for credential placement and call-button wrapping. Local evidence is in `phase1-audit/pr73-refinement-evidence/`.
+
+Manual requirements are unchanged: owner editorial review, physical-device/assistive-technology checks, production mailbox delivery and redirect verification, real GA4 ingestion/settings, and any future Calendly completion integration. Before enabling Russian analytics, localized notices/controls and the expanded consent matrix in the language audit need implementation and review. Neither merge nor deployment was performed.
+
 ## Completed checks
 
 - Browser regression: all 23 public HTML content pages at 375, 768 and 1440 pixels wide (69 page/viewport combinations). Checked a single H1, metadata presence, duplicate IDs, JSON-LD parsing, internal links and fragments, local asset destinations, missing images, horizontal overflow and JavaScript errors. Mobile menus opened and closed with Escape. Passed.
@@ -17,7 +31,7 @@ Date: October 20, 2026. Base: GitHub main `22f8e1245c139b074bb9ae7a0dc0d0aa33cc6
 
 ## Files and pages changed
 
-Added: `canadian-resume-newcomers.html`, `ru/rezume-dlya-novichkov-v-kanade.html`, `scripts/check-site.py`, and the three review documents in `docs/`.
+Added: `canadian-resume-newcomers.html`, `ru/rezume-dlya-novichkov-v-kanade.html`, `scripts/check-site.py`, and the review documents in `docs/`.
 
 Substantive existing-page updates: `index.html`, `ru/index.html`, `services.html`, `ru/services.html`, and `contact.html`. Shared changes: `site.js`, `styles.css`, `sitemap.xml`, `_config.yml`.
 
