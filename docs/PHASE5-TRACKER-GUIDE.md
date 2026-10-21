@@ -12,7 +12,7 @@ Add a row when someone actually inquires about help. A website click, social rea
 | --- | --- |
 | `lead_id` | Unique internal inquiry reference, not a person's name/email/phone |
 | `inquiry_date` | Date first actual inquiry was received, `YYYY-MM-DD` |
-| `lead_source` | Source voluntarily reported or reliably known: e.g. LinkedIn post 1, LinkedIn profile, Facebook English, Facebook Russian, CPC directory, TRIEC introduction, Google Search, existing referral. Use `Unknown` when unconfirmed |
+| `lead_source` | Source voluntarily reported or reliably known: e.g. LinkedIn post 1, LinkedIn profile, Facebook English, Facebook Russian, TRIEC introduction, Google Search, existing referral. Use `Unknown` when unconfirmed |
 | `requested_service` | Reader's stated need: resume writing, career direction, two directions, LinkedIn, interview preparation, other or undecided. Do not infer need from an automated score |
 | `initial_inquiry_received` | `Yes` for a real inquiry. Do not enter clicks here. A saved empty preparation row is not an inquiry |
 | `introductory_call_booked` | `Yes`, `No` or blank if unknown; verify against actual booking record |

@@ -6,7 +6,7 @@ Proposed window: **October 22–November 4, 2026**. Julia can shift dates around
 | --- | --- | --- | --- | --- |
 | 1 | Oct 22 | 20 min | Review [Search Console findings](PHASE5-SEARCH-CONSOLE.md); confirm live sitemap processing and commercial-page crawl status | Decide whether owner should request indexing after checking live eligibility. Do not rewrite ATS automatically |
 | 2 | Oct 23 | 20 min | Sign in to LinkedIn and compare current headline/About/Services with [profile drafts](PHASE5-PROFILE-REVIEWS.md) | Approve exact fields or retain existing text. Confirm current credentials and real service coverage before editing |
-| 3 | Oct 24 | 15 min | Check Julia's own CPC portal record and directory opt-in/name settings | Resolve the public zero-result search through the existing account. No duplicate entry or membership purchase |
+| 3 | Oct 24 | 15 min | Review website and free introductory-call links in LinkedIn contact and Featured sections | Verify exact destinations in the signed-in account; approve field changes before editing |
 | 4 | Oct 25 | 10 min | Review LinkedIn post 1 and its live article link | Approve the exact text. If not approved, keep it as a draft and move the publication date |
 | 5 | Oct 26 | 10 min | Julia publishes approved LinkedIn post 1, if ready | Record publication date and destination in existing marketing notes. Add no tracker lead row until an actual inquiry arrives |
 | 6 | Oct 27 | 15 min | Review LinkedIn post 2 and the English/Russian Facebook alternatives | Approve only the variants Julia wants to use; confirm article language label and chosen audience |

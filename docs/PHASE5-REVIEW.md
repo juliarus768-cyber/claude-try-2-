@@ -7,8 +7,8 @@ Prepared October 21, 2026 from main after the approved Phase 4 merge. This pack 
 - Reconfirmed PR #75 at head `cc5b428`: exactly seven added `docs/PHASE4-*.md` files, no runtime/site/configuration changes. Merged under the user's explicit Phase 5 authorization. GitHub confirmed merge commit **`77e0e16da04242a51a56710ace2b60b10097651a`**. No separate deployment action was taken.
 - Read the five specified Phase 4 reports and used their existing research as the starting point.
 - Read eight priority URL Inspection results and the sitemap processing report. Exported the exact ATS article's 34 visible queries and all four metrics.
-- Reviewed the reachable public LinkedIn/CPC surfaces and recorded their limits. LinkedIn required sign-in; CPC's specified public name search returned zero opted-in matches. Neither was described as a full account audit.
-- Prepared four social texts, two profile-copy proposals, exactly five opportunity records, two recipient-specific messages, a blank CSV and an executable two-week manual schedule.
+- Reviewed reachable public LinkedIn surfaces and recorded their limits. LinkedIn required sign-in; this was not a full account audit. CPC directory work is excluded as requested; verified credential references remain.
+- Prepared four social texts, LinkedIn profile-copy proposals, exactly five opportunity records, two recipient-specific messages, a blank CSV and an executable two-week manual schedule.
 
 ## Use these files
 
@@ -16,7 +16,7 @@ Prepared October 21, 2026 from main after the approved Phase 4 merge. This pack 
 | --- | --- |
 | Search Console findings, canonical/crawl/sitemap status and ATS recommendation | [PHASE5-SEARCH-CONSOLE.md](PHASE5-SEARCH-CONSOLE.md) |
 | Complete exact-page ATS query export | [PHASE5-ATS-QUERIES.csv](PHASE5-ATS-QUERIES.csv) — 34 historical rows, not client data |
-| LinkedIn recommendations and CPC directory review | [PHASE5-PROFILE-REVIEWS.md](PHASE5-PROFILE-REVIEWS.md) — compare with the signed-in account before approving fields |
+| LinkedIn profile recommendations | [PHASE5-PROFILE-REVIEWS.md](PHASE5-PROFILE-REVIEWS.md) — compare with the signed-in account before approving fields |
 | Two LinkedIn posts, one Facebook post, one Russian adaptation | [PHASE5-SOCIAL-POSTS.md](PHASE5-SOCIAL-POSTS.md) — approve the exact text and placement; only copy the post section when publishing |
 | Five researched opportunities and messages A/B | [PHASE5-REFERRALS-OUTREACH.md](PHASE5-REFERRALS-OUTREACH.md) — select one; approve the recipient and message |
 | Blank client-acquisition template | [PHASE5-CLIENT-ACQUISITION-TEMPLATE.csv](PHASE5-CLIENT-ACQUISITION-TEMPLATE.csv) — save privately only if an existing ledger cannot be reused |
@@ -41,6 +41,6 @@ The ATS query mix is relevant to the practical topics now covered by the article
 
 Julia approves each external profile field, post text/placement, recipient/message and offered commitment before action. Organization permission is separate. No accounts were edited, listings created, messages sent, posts published, money spent or automations created. New Phase 5 changes require PR review and must not be merged/deployed automatically.
 
-Remaining account tasks: owner live-URL tests/indexing requests if desired; follow-up crawl/index/sitemap dates; signed-in LinkedIn/Services review; Julia's existing CPC profile/opt-in and current membership verification; actual inquiry/booking/payment records. An unknown or unavailable field remains unknown, not zero or a failed business outcome.
+Remaining account tasks: owner live-URL tests/indexing requests if desired; follow-up crawl/index/sitemap dates; signed-in LinkedIn/Services review; actual inquiry/booking/payment records. An unknown or unavailable field remains unknown, not zero or a failed business outcome.
 
-Research evidence is retained locally in `phase1-audit/phase5-evidence/`, including the filtered ATS export, eight inspection snapshots, sitemap report and directory search snapshot. Do not publish full account/browser records or fill the tracked CSV with real client data in this public repository.
+Research evidence is retained locally in `phase1-audit/phase5-evidence/`, including the filtered ATS export, eight inspection snapshots, sitemap report. Do not publish full account/browser records or fill the tracked CSV with real client data in this public repository.

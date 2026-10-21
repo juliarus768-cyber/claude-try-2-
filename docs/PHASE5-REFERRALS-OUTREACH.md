@@ -18,7 +18,7 @@ The HRPA public speaker page was available in search-engine text; direct retriev
 
 Start with **TRIEC PINs** for Message B if Julia approves the audience/topic and the team confirms outside-contributor rules. It offers the closest topic fit without a proposed membership purchase. Keep HRPA Message A as an alternative for a professional collaboration inquiry. Use only one initial opportunity during the two-week schedule; do not send the same pitch to all five.
 
-ACCES and community programs are not a substitute for a paid-client acquisition channel. Free/publicly funded services may have referral, procurement and conflict rules. Do not suggest their free support is inadequate or ask staff to steer participants into private packages. CPC is not added as a sixth prospect: its [contact policy](https://careerprocanada.ca/contact/) says it does not accept unsolicited non-member guest-post/publication/service requests. Julia's membership/entry should be clarified through her own account before considering any permitted member contribution. Never solicit directory members or scrape lists.
+ACCES and community programs are not a substitute for a paid-client acquisition channel. Free/publicly funded services may have referral, procurement and conflict rules. Do not suggest their free support is inadequate or ask staff to steer participants into private packages. Never solicit members or scrape lists.
 
 ## Message A — professional collaboration
 

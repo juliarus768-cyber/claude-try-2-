@@ -1,4 +1,4 @@
-# LinkedIn and CPC directory review
+# LinkedIn profile review
 
 October 21, 2026. Recommendations only. No external account, contact field, listing or visibility setting was changed.
 
@@ -47,17 +47,3 @@ Resume strategy and career support for professionals, newcomers and career chang
 Suggested website field: `https://hiremenowresumes.ca/`. Suggested Featured items: the service comparison page and one of the two useful international-experience articles. Do not add several competing booking links. For contact, use only Julia's approved business route; the published business inquiry option is `https://hiremenowresumes.ca/contact.html`. Do not expose a personal email/phone by assumption.
 
 Owner acceptance checklist: confirm credentials; review the existing Services page first; compare writing versus direction wording; test website/call links; confirm Toronto/GTA plus remote Canada; preview the signed-out view; approve exact field changes. These are recommendations, not completed account updates.
-
-## CPC directory: actual public search
-
-Used the [CPC member directory](https://www.careerprocanada.org/Directory) advanced search with **First Name contains “Julia”** and **Last Name contains “Cher”**. Result: **Found 0 — No matching records (only opted-in members are included)**. The filtered browser URL is session-dependent, so the criteria are recorded here rather than presented as a permanent profile URL.
-
-No public professional description, credential badges, service list, location, online availability, website link or contact fields could be reviewed because no matching opted-in entry was returned. This is not a finding that Julia lacks membership/certification, nor proof that an entry never exists under another name. No duplicate listing should be created from this result.
-
-Julia's next step is to inspect her own existing member profile/opt-in setting in the [Members Portal](https://www.careerprocanada.org/Content/Members/MemberProfile.aspx), if she already has access. Confirm account identity and current membership before any directory edit. If she expects a public listing but cannot find it, use [CPC's official contact route](https://careerprocanada.ca/contact/) for account/directory clarification. Do not purchase membership or send a commercial pitch to other members.
-
-If an existing entry is available and needs clearer copy, proposed description for approval:
-
-> Julia Cher leads Hire Me Now Resumes, providing resume strategy and career support for Canadian job seekers. Services include targeted resume and cover letter writing, career direction, LinkedIn positioning and interview preparation. Clients in Toronto/GTA and across Canada can explore remote support. The website explains the difference between review/direction and document-writing packages, current inclusions and pricing, and the optional free 15-minute introductory call.
-
-Enter credentials only in the directory's supported fields using verified current designations. Confirm accepting-clients availability with Julia rather than setting it to Yes automatically. Website: `https://hiremenowresumes.ca/`; business contact route: `https://hiremenowresumes.ca/contact.html`, subject to directory-supported fields and Julia's approval.
