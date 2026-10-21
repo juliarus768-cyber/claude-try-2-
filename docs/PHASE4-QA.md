@@ -2,6 +2,8 @@
 
 October 21, 2026. Base main `ab1777c`. This PR contains review documents only. No HTML, CSS, JavaScript, sitemap, configuration, package, image, booking integration or diagnostic source change is included. Reports remain under `docs/`, already excluded from the Jekyll publication configuration.
 
+The supplied Excel export was compared read-only with all seven CSV tables; row/value comparisons passed after number/percentage normalization. No source workbook was changed.
+
 ## Completed checks
 
 | Check | Result and scope |
