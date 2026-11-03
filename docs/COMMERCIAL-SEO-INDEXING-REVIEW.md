@@ -1,6 +1,6 @@
 # Commercial SEO and indexing review — November 2, 2026
 
-Status: reviewed and tested on `codex/commercial-seo-indexing`, based on main `0316d8280da9e96523e1cfd5821d3236f960cfbb`. No deployment, merge, indexing request or Search Console account mutation performed. The functioning FormSubmit implementation is unchanged. The separate Cloudflare/Zoho replacement remains an undeployed fallback on `codex/lead-generation-repair`; none of that code is included here.
+Status: reviewed and tested on `codex/commercial-seo-indexing`, based on main `0316d8280da9e96523e1cfd5821d3236f960cfbb`. Approved sitemap-report cleanup completed November 3, 2026. No deployment, merge or indexing request performed; deployment remains explicitly on hold. The functioning FormSubmit implementation is unchanged. The separate Cloudflare/Zoho replacement remains an undeployed fallback on `codex/lead-generation-repair`; none of that code is included here.
 
 ## 1. Current indexing evidence
 
@@ -17,7 +17,7 @@ Read from the authorized URL-prefix property `https://hiremenowresumes.ca/` on N
 
 ## 2. Verified sitemap-report errors
 
-Search Console currently lists three submitted entries:
+Before cleanup, Search Console listed these three submitted entries (November 2 inspection):
 
 | Submitted path | Last read | Status | Discovered pages |
 | --- | --- | --- | ---: |
@@ -27,7 +27,7 @@ Search Console currently lists three submitted entries:
 
 The two HTML pages were submitted October 22 as if they were XML sitemap documents. Their report errors are real; they are not page-fetch failures. The correct XML contains both commercial URLs and all 24 expected content URLs. It was processed after the latest published changes, so another sitemap submission is not currently necessary.
 
-Recommended account cleanup: remove only those two **submitted sitemap report entries**, keeping `/sitemap.xml`. Do not remove the actual pages, use Google's URL Removals tool, change their robots/canonicals, or create replacement sitemaps. This cleanup is separate from deploying source changes and has not been performed. The erroneous submissions are not proven to cause non-indexing.
+**Completed November 3 with Julia's explicit approval:** removed only the two mistaken **submitted sitemap report entries**. The report now contains exactly one entry, `/sitemap.xml`, still marked **Success**, last read November 1, with **24** discovered pages. Both actual HTML pages and the XML sitemap were then independently fetched and still return HTTP 200 at their original URLs. No page was deleted, blocked or submitted to Google's URL Removals tool. No indexing request, new sitemap submission or deployment was performed. Evidence: `submitted-sitemaps-after.png` and `sitemap-cleanup-completed.json` in local evidence. The erroneous submissions are not proven to cause non-indexing, and their cleanup is not a claim of successful indexing.
 
 ## 3. Commercial intent and content review
 
@@ -71,13 +71,13 @@ Raw evidence and screenshots are retained in the excluded local commercial-seo-e
 
 Source changes are ready for review; **do not merge or deploy without Julia's approval**. After an approved release, verify the live services H1, complete main landmark, original contact/booking destinations and the updated sitemap lastmod. Keep the existing FormSubmit form and undeployed fallback as instructed.
 
-After cleanup approval, remove the two incorrect HTML sitemap-report entries and retain the successful XML entry. Recheck the sitemap's next read rather than submitting duplicate sitemap URLs. For services.html, Phase 6 recorded a failed October 22 request; verify that no later request was accepted, then consider **one** Request Indexing after the changed page passes its live test. For resume-writing, the October 22 request was accepted: do not duplicate it merely because its current record says unknown. Check again around **November 9** and **November 16**, recording actual index status, indexing crawl time and Google-selected canonical. These are review dates, not promised indexing dates. If unchanged, review the evidence and page usefulness instead of repeating requests daily.
+The approved sitemap-report cleanup is complete; retain the sole successful XML entry and recheck its next read rather than submitting duplicate sitemap URLs. For services.html, Phase 6 recorded a failed October 22 request; verify that no later request was accepted, then consider **one** Request Indexing after the changed page passes its live test. For resume-writing, the October 22 request was accepted: do not duplicate it merely because its current record says unknown. Check again around **November 9** and **November 16**, recording actual index status, indexing crawl time and Google-selected canonical. These are review dates, not promised indexing dates. If unchanged, review the evidence and page usefulness instead of repeating requests daily.
 
 Google explicitly states that crawl requests do not guarantee inclusion and repeated requests do not accelerate crawling. [Google recrawl guidance](https://developers.google.com/search/docs/crawling-indexing/ask-google-to-recrawl), [Page indexing explanations](https://support.google.com/webmasters/answer/7440203), [Descriptive title guidance](https://developers.google.com/search/docs/appearance/title-link).
 
 ## 7. Three priorities for the next 30 days
 
-1. **Week 1: correct submission hygiene and monitor the two commercial URLs.** Approve the small release if desired; clean up the HTML sitemap entries; use the above single-request rules. Maintain a weekly record of eligibility versus actual indexing/canonical selection.
+1. **Week 1: monitor the two commercial URLs after the completed sitemap cleanup.** Approve the small release if desired; use the above single-request rules. Maintain a weekly record of eligibility versus actual indexing/canonical selection.
 2. **Weeks 1–3: improve qualified discovery through existing assets.** Keep the indexed homepage's Toronto/Canada positioning and direct resume-service path. Use existing resume/newcomer/LinkedIn guidance in relevant owner-controlled marketing/referral channels, pointing readers to the most suitable paid service or the free introductory call. Verify the business's existing Google Business Profile eligibility/details before considering changes; do not invent a storefront or create doorway pages. No outbound posting/account edits are included in this task.
 3. **Weeks 2–4: measure qualified inquiries alongside search data.** Compare equal periods after a real crawl/index change, separating commercial versus informational and branded queries where visible, plus Canada/mobile performance. Review actual inquiry quality, bookings and paid clients alongside existing consent-based events; do not change GA4 or count every click as a lead. With low volumes, prioritize useful patterns and confirmed outcomes rather than percentage swings.
 
