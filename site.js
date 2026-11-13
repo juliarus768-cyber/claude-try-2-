@@ -182,11 +182,47 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('DOMContentLoaded', () => {
   const pendingContactKey = 'hmn_contact_pending_at';
   const pendingTtlMs = 60 * 60 * 1000;
+  const pendingServiceKey = 'hmn_service_interest';
+  const contentSources = {
+    '/international-work-experience-canadian-resume.html': 'international_experience_article',
+    '/explain-foreign-job-titles-canadian-resume.html': 'foreign_titles_article',
+    '/canadian-resume-newcomers.html': 'newcomer_page'
+  };
 
   function track(eventName, parameters) {
     if (!window.HMNConsent || !window.HMNConsent.isGranted()) return;
     if (typeof window.gtag !== 'function') return;
     window.gtag('event', eventName, parameters);
+  }
+
+  // Same-tab links leave before gtag reliably processes queued commands.
+  // Carry only consented, fixed identifiers to the destination, without
+  // delaying navigation or sending the same interest event on both pages.
+  try {
+    const pending = JSON.parse(window.sessionStorage.getItem(pendingServiceKey));
+    if (pending) {
+      const valid = Number.isFinite(pending.at) && Object.values(contentSources).includes(pending.source) &&
+        ['career-clarity', 'resume-strategy', 'multi-path', 'resume_writing', 'services_overview'].includes(pending.service) &&
+        ['/services.html', '/resume-writing-services.html'].includes(pending.destination) &&
+        pending.destination === window.location.pathname &&
+        Date.now() - pending.at >= 0 && Date.now() - pending.at < 30000;
+      if (!valid || !window.HMNConsent || !window.HMNConsent.isGranted()) {
+        window.sessionStorage.removeItem(pendingServiceKey);
+      } else {
+        window.HMNConsent.whenAnalyticsReady(() => {
+          try {
+            const current = window.sessionStorage.getItem(pendingServiceKey);
+            window.sessionStorage.removeItem(pendingServiceKey);
+            const age = Date.now() - pending.at;
+            if (current === JSON.stringify(pending) && age >= 0 && age < 30000) {
+              track('service_click', { source_content: pending.source, service_interest: pending.service });
+            }
+          } catch (_) {}
+        });
+      }
+    }
+  } catch (_) {
+    // Storage restrictions must never interfere with a service link.
   }
 
   // Interest only, not an actual completed booking or diagnostic.
@@ -205,17 +241,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Measure content-to-service interest separately from outbound booking clicks.
     // Fixed page/service identifiers only; never include arbitrary URLs or form data.
-    const contentSources = {
-      '/international-work-experience-canadian-resume.html': 'international_experience_article',
-      '/explain-foreign-job-titles-canadian-resume.html': 'foreign_titles_article',
-      '/canadian-resume-newcomers.html': 'newcomer_page'
-    };
     const source = contentSources[window.location.pathname];
     if (source && link.closest('main') && destination.origin === window.location.origin &&
         ['/services.html', '/resume-writing-services.html'].includes(destination.pathname)) {
       const targets = { '#career-clarity': 'career-clarity', '#resume-strategy': 'resume-strategy', '#multi-path': 'multi-path' };
       const service = targets[destination.hash] || (destination.pathname === '/resume-writing-services.html' ? 'resume_writing' : 'services_overview');
-      track('service_click', { source_content: source, service_interest: service });
+      const sameTab = (!link.target || link.target === '_self') && !link.hasAttribute('download') &&
+        !event.defaultPrevented && event.button === 0 &&
+        !event.ctrlKey && !event.metaKey && !event.shiftKey && !event.altKey;
+      let carried = false;
+      if (sameTab && window.HMNConsent && window.HMNConsent.isGranted()) {
+        try {
+          window.sessionStorage.setItem(pendingServiceKey, JSON.stringify({
+            source, service, destination: destination.pathname, at: Date.now()
+          }));
+          carried = true;
+        } catch (_) {}
+      }
+      if (!carried) track('service_click', { source_content: source, service_interest: service });
     }
 
     if (destination.hostname === 'calendly.com' &&
